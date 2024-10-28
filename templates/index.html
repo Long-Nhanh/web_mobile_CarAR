@@ -1,0 +1,164 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="lamborghini__layout lamborghini__unintro">
+    <div class="lamborghini__unintro-wrap" >
+                <div class="lamborghini__unintro-media-inner">
+                        <video id="videoMedia" class="lamborghini__horizontal-background lamborghini__horizontal-background-desktop"
+                            autoplay muted loop playsinline>
+                            <source src="../static/video/background-desktop.mp4" type="video/mp4" />
+                        </video>
+                        <video id="videoMedia" class="lamborghini__horizontal-background lamborghini__horizontal-background-mobile" autoplay
+                            muted loop playsinline>
+                            <source src="../static/video/background-mobile.mp4" type="video/mp4" />
+                        </video>
+                </div>
+
+<div class="lamborghini__unintro-component lamborghini__unintro-panel lamborghini__unintro-left lamborghini__component "
+    data-section="INTRO" data-section-anchor="INTRO">
+    <div class="bar"></div>
+    <div class="lamborghini__unintro-panel-inner">
+            <div class="lamborghini__panel-asset">
+                    <video id="video2" class="lamborghini__panel-asset-desktop" data-frame="14" autoplay muted playsinline loop>
+                        <source src="../static/video/index.mp4" type="video/mp4" />
+                    </video>
+                    <video id="video2" class="lamborghini__panel-asset-mobile" data-frame="14" autoplay loop muted playsinline>
+                        <source src="../static/video/index.mp4" type="video/mp4" />
+                    </video>
+            </div>
+    </div>
+
+
+    <div class="lamborghini__unintro-panel-description-wrapper">
+        <div class="lamborghini__intro-text lamborghini__intro-center-center">
+            <div class="lamborghini__intro-line lamborghini__intro-quote">
+                <span>
+                    <h1>
+                        WE ARE NOT SUPERCARS. WE ARE<br>LAMBORGHINI
+                    </h1>
+                </span>
+            </div>
+            <div class="lamborghini__intro-line lamborghini__intro-author">
+                <span>Stephen Winkelmann</span>
+            </div>
+            <div class="lamborghini__intro-line lamborghini__description">
+                <span class="lamborghini__description__para">
+                    <p>Expect the Unexpected</p>
+                </span>
+            </div>
+        </div>
+        <div class="lamborghini__scroll-wrapper" style="left: -5px;">
+            <div class="lamborghini__scroll-wrapper-scroll lamborghini__scroll">
+                <svg width="25px" height="29px" viewBox="0 0 25 29" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Batch-2--Introduction-sequence-&amp;-Homepage" stroke="none" stroke-width="1" fill="none"
+                        fill-rule="evenodd">
+                        <g id="14-lamborghini-Website-M" transform="translate(-174.000000, -491.000000)" stroke="#FFFFFF"
+                            stroke-width="3">
+                            <g id="scroll-down" transform="translate(147.000000,
+                            493.000000)">
+                                <g id="Group-2" transform="translate(28.000000,
+                                0.000000)">
+                                    <polyline id="Path-2" points="0 0 11.3506311
+                                    9.65060165 23 0"></polyline>
+                                    <polyline id="Path-2-Copy" points="0 7.67469917 11.3506311
+                                    17.3253008 23 7.67469917"></polyline>
+                                    <polyline id="Path-2-Copy-2" points="0
+                                    15.3493983 11.3506311 25 23 15.3493983">
+                                    </polyline>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ******* galleryBg ******* -->
+<div class="lamborghini__unintro-galleryBg" style="background: url('') no-repeat top left / cover;
+        height: 100vH;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        position:absolute;
+        left: 0;
+        top: 0;
+    "></div>
+
+<!-- ******* gallery ******* -->
+<div class="lamborghini__unintro-component lamborghini__unintro-gallery lamborghini__gallery lamborghini__component "
+    data-section="" data-section-anchor="">
+    <div class="lamborghini__gallery__container">
+    </div>
+</div>
+<div class="lamborghini__unintro-component lamborghini__miau lamborghini__component " data-section="MAKE IT AN UNICORN" data-section-anchor="MAKE-IT-AN-UNICORN">
+    <div class="lamborghini__miau-cards">
+        {% for row in data %}
+            <div class="lamborghini__miau-card-wrapper-outter" data-media-desktop-type="video" data-media-moble-type="">
+                <a class="lamborghini__miau-card-wrapper" href="/product/{{ row[0] }}" target="">
+                <div class="lamborghini__miau-card" data-anchor="" >
+                    <div class="lamborghini__miau-card-inner">
+            
+                        <video class="lamborghini__miau-card-video" loop muted playsinline poster="../static/images/{{ row[2] }}" >
+                            <source src="../static/video/{{ row[6]}}" data-src="../static/video/{{ row[6]}}">
+                            </source>
+                        </video>
+                    <div class="lamborghini__miau-card-inner-text">
+                        <h2>{{ row[1]}}</h2>
+                        <div></div>
+                        <p>{{ row[5]}}</p>
+                    </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- ******* galleryBg ******* -->
+<div class="lamborghini__unintro-galleryBg" style="background: url('') no-repeat top left / cover;
+        height: 100vH;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        position:absolute;
+        left: 0;
+        top: 0;
+    ">
+</div>
+
+<!-- ******* gallery ******* -->
+<div class="lamborghini__unintro-component lamborghini__unintro-gallery lamborghini__gallery lamborghini__component " data-section="" data-section-anchor="">
+    <div class="lamborghini__gallery__container">
+    </div>
+</div> 
+</div>
+</div>
+  
+<audio loop id="lamborghini__audio" src="../static/video/index.mp3" preload="auto">
+</audio>
+
+<div class="lamborghini__settings-bar">
+    <div class="lamborghini__settings-bar-inner">
+        <div class="lamborghini__language" id="lamborghiniLanguage">
+            ENGLISH
+        </div>
+        <div class="lamborghini-logo">
+                <a href="/">
+                    <img loading="lazy" class="lamborghini__settings-logo" src="../static/images/logo.png" alt="Logo (1)">
+                </a>
+        </div>
+        <div class="lamborghini__sound" data-sound-on="AUDIO ON" data-sound-off="AUDIO OFF">
+            AUDIO OFF
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

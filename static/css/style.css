@@ -1,0 +1,5780 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#video-background {
+    position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100vh;
+ object-fit: cover;
+    z-index: -1000;
+}
+
+#content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.logo {
+    position: fixed;
+    font-size: 26px;
+    top: 19px;
+    /* margin: auto; */
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.header {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    
+    color: rgb(255, 255, 255);
+}
+
+.jumbotron {
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.cars {
+    padding: 20px;
+    text-align: center;
+}
+
+#checkbox {
+    display: none;
+  }
+  
+  .toggle {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition-duration: .5s;
+  }
+  
+  .bars {
+    width: 100%;
+    height: 4px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+  }
+  
+  #bar2 {
+    transition-duration: .8s;
+  }
+  
+  #bar1,#bar3 {
+    width: 70%;
+  }
+  
+  #checkbox:checked + .toggle .bars {
+    position: absolute;
+    transition-duration: .5s;
+  }
+  
+  #checkbox:checked + .toggle #bar2 {
+    transform: scaleX(0);
+    transition-duration: .5s;
+  }
+  
+  #checkbox:checked + .toggle #bar1 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+  }
+  
+  #checkbox:checked + .toggle #bar3 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+  }
+  
+  #checkbox:checked + .toggle {
+    transition-duration: .5s;
+    transform: rotate(180deg);
+  }
+
+  .scrolling-container {
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.scrolling-content {
+    display: inline-block;
+}
+
+.scrolling-content img {
+    width: auto;
+    max-height: 300px; /* Điều chỉnh kích thước tối đa của hình ảnh */
+    margin-right: 20px; /* Khoảng cách giữa các hình ảnh */
+}
+
+.pace-running {
+  overflow: hidden
+}
+
+.pace-running::-webkit-scrollbar {
+  display: none
+}
+
+.pace-running {
+  -ms-overflow-style: none;
+  scrollbar-width: none
+}
+
+.pace {
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 800px;
+  overflow: hidden;
+  width: 100%;
+  z-index: 200000
+}
+
+.pace,.pace:before {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0
+}
+
+.pace:before {
+  background: #000;
+  content: "";
+  display: block;
+  height: 100vh;
+  width: 100vw
+}
+
+.pace:after {
+  background-color: #000;
+  bottom: 120px;
+  content: "";
+  display: block;
+  height: 5px;
+  left: 800px;
+  position: absolute;
+  right: 0;
+  top: auto;
+  width: 100vw;
+  z-index: 22222
+}
+
+.pace-progress-inner-text:after {
+  background: #004bfa;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 5px;
+  left: 0;
+  margin-top: 20px;
+  overflow: hidden;
+  position: static;
+  right: 0;
+  top: 0;
+  width: 800px
+}
+
+.pace .pace-progress {
+  background-color: gray;
+  display: block;
+  height: 5px;
+  max-width: 800px;
+  position: fixed;
+  width: 100%;
+  z-index: 2000
+}
+
+.pace.pace-inactive {
+  display: none
+}
+
+.pace-change-text {
+  align-items: center;
+  bottom: 0;
+  color: #fff;
+  display: flex;
+  font-family: lamborghini Display Regular,sans-serif,Arial;
+  font-size: 200px;
+  font-weight: 400;
+  justify-content: center;
+  left: 0;
+  letter-spacing: -8.5px;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  white-space: pre;
+  width: 100%;
+  z-index: 202
+}
+
+.pace-progress-inner-text {
+  color: #fff;
+  color: #4b4b4b;
+  font-family: "lamborghini Monospace Regular";
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 20
+}
+
+.pace .pace-progress,.pace-progress-inner-text {
+  bottom: 120px;
+  position: absolute
+}
+
+.pace-progress-inner-text:after {
+  top: 20px
+}
+
+@media screen and (max-width: 1200px) {
+  .pace {
+      max-width:100%;
+      width: calc(100% - 40px)
+  }
+
+  .pace-change-text {
+      font-size: 13vw
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pace-change-text {
+      background-size:50%!important;
+      font-size: 55px;
+      letter-spacing: -2.5px
+  }
+
+  .pace-progress-inner-text {
+      font-size: 12px;
+      margin: 5px 0;
+      max-width: 100%
+  }
+
+  .pace .pace-progress {
+      bottom: 125px
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .pace-change-text {
+      font-size:40px
+  }
+}
+
+* {
+  box-sizing: border-box;
+  font-family: lamborghini Text Regular,sans-serif;
+  margin: 0;
+  padding: 0
+}
+
+body,html {
+  background-color: #ffffff;
+  overflow-x: hidden;
+  width: 100%
+}
+
+.pin-spacer,body {
+  overflow: hidden
+}
+
+.border-blue {
+  border: 10px solid blue
+}
+
+.border-green {
+  border: 10px solid green
+}
+
+.border-red {
+  border: 10px solid red
+}
+
+.border-purple {
+  border: 10px solid purple
+}
+
+.object-fit-cover {
+  -o-object-fit: cover;
+  object-fit: cover
+}
+
+.lamborghini__scroll-wrapper {
+  align-items: center;
+  bottom: 250px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 1001
+}
+
+.lamborghini__scroll-wrapper-scroll {
+  padding-top: 40px;
+  position: absolute
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__scroll-wrapper-scroll {
+      font-size:12px
+  }
+}
+
+.lamborghini__scroll-wrapper-scroll-label {
+  color: #fff
+}
+
+.lamborghini__nav-active,.lamborghini__nav-active body {
+  overflow: hidden
+}
+
+.lamborghini__scroller {
+  scrollbar-width: none!important
+}
+
+.lamborghini__scroller::-webkit-scrollbar {
+  display: none!important;
+  scrollbar-width: none!important
+}
+
+/* .lamborghini__max-contaier-width {
+  max-width: 1170px
+} */
+
+.lamborghini__brand-name {
+  font-family: lamborghini Display Regular
+}
+
+.col {
+  text-align: center;
+  width: 33.3%
+}
+
+.lamborghini__main-link--desktop {
+  display: inline-block;
+  font: inherit;
+  margin-left: -20px
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__main-link--desktop {
+      display:none
+  }
+}
+
+.lamborghini__main-link--mobile {
+  display: none;
+  font: inherit
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__main-link--mobile {
+      display:block
+  }
+}
+
+.lamborghini__container-nav {
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%
+}
+
+.lamborghini__container-nav button {
+  margin: 0
+}
+
+.lamborghini__container-nav button:focus {
+  outline: 0
+}
+
+.lamborghini__container-nav .menu {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: none;
+  display: flex;
+  flex-direction: row;
+  float: right;
+  height: 2.5rem;
+  height: 30px;
+  justify-content: flex-start;
+  padding: 0;
+  position: relative;
+  width: 30px
+}
+
+.lamborghini__container-nav .menu svg {
+  height: 100%
+}
+
+.lamborghini__container-nav .menu .edges {
+  height: 14px;
+  left: 5px;
+  position: absolute;
+  width: auto
+}
+
+.lamborghini__container-nav .menu .burger-sign {
+  height: 40px;
+  min-width: 30px
+}
+
+.lamborghini__container-nav .menu .bgt-sign,.lamborghini__container-nav .menu .close-sign {
+  visibility: hidden
+}
+
+.lamborghini__container-nav .line {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 6;
+  transition: stroke-dasharray .6s cubic-bezier(.4,0,.2,1),stroke-dashoffset .6s cubic-bezier(.4,0,.2,1)
+}
+
+.lamborghini__container-nav .line1 {
+  stroke-dasharray: 60 207
+}
+
+.lamborghini__container-nav .line2 {
+  stroke-dasharray: 40 60
+}
+
+.lamborghini__container-nav .line3 {
+  stroke-dasharray: 60 207
+}
+
+.lamborghini__navigation_head {
+  background-color: #000;
+  align-content: stretch;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 60px;
+  justify-content: center;
+  justify-content: space-between;
+  left: 0;
+  margin: 0 auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%
+}
+
+.lamborghini__navigation_center,.lamborghini__navigation_left {
+  display: inline-block;
+  
+  position: static
+}
+
+.lamborghini__navigation_right {
+  display: inline-block;
+  padding: 0 15px;
+  position: static
+}
+
+.main-logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase
+}
+
+.lamborghini__nav-bar {
+  border-bottom: none;
+  bottom: 0;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transition: all .7s ease;
+  width: 100%;
+  z-index: 9999
+}
+
+.lamborghini__navbar-fixed {
+  box-shadow: 0 1px 1px rgba(0,0,0,.5)
+}
+
+.lamborghini__nav-bar__overlay {
+  background-color: #000;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 0
+}
+
+#nav {
+  display: none;
+  font-weight: 400;
+  height: auto;
+  order: 2;
+  transition: all .7s ease;
+  width: 100%
+}
+
+#nav .lamborghini__main_navigation {
+  counter-reset: my-awesome-counter;
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+#nav .lamborghini__nav-item:active>a,#nav .lamborghini__nav-item:focus>a,#nav .lamborghini__nav-item:hover>a,#nav .lamborghini__subitem:active>a,#nav .lamborghini__subitem:focus>a,#nav .lamborghini__subitem:hover>a {
+  color: #004bfa
+}
+
+.lamborghini__main_navigation {
+  color: #fff;
+  display: block;
+  height: auto;
+  height: 100vh;
+  margin: 0 auto
+}
+
+.lamborghini__main_navigation,.lamborghini__main_navigation .umb-block-list {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%
+}
+
+.lamborghini__main_navigation .umb-block-list {
+  height: 100%
+}
+
+.lamborghini__main_navigation .lamborghini__nav-item {
+  align-items: center;
+  display: flex;
+  height: auto;
+  height: 100px;
+  justify-content: center;
+  line-height: 1;
+  margin: 0 0 10px;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  width: 100%
+}
+
+.lamborghini__main_navigation .lamborghini__nav-item:last-of-type {
+  padding-bottom: 0
+}
+
+.lamborghini__main_navigation .lamborghini__nav-item a {
+  height: 100%;
+  text-transform: uppercase;
+  transition: all .5s ease-out
+}
+
+.lamborghini__main_navigation .lamborghini__nav-item>a {
+  margin-right: 20px;
+  white-space: nowrap;
+  word-break: inherit
+}
+
+.lamborghini__main_navigation .lamborghini__nav-item-1>a {
+  margin-left: 150px
+}
+
+.lamborghini__main_navigation .lamborghini__nav-item-2>a {
+  margin-left: -200px
+}
+
+.lamborghini__main_navigation .lamborghini__nav-item-3>a {
+  margin-left: -150px
+}
+
+.lamborghini__main_navigation .lamborghini__nav-item-4>a {
+  margin-left: 300px
+}
+
+.lamborghini__main_navigation .lamborghini__nav-item-5>a {
+  margin-left: -180px
+}
+
+.lamborghini__submenu {
+  display: none
+}
+
+.lamborghini__submenu .lamborghini__overview a {
+  background-color: #004bfa
+}
+
+.lamborghini__submenu .lamborghini__subitem {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  list-style: none;
+  margin: 0 20px 0 0;
+  position: relative
+}
+
+.lamborghini__submenu .lamborghini__subitem:hover a {
+  background-color: #004bfa;
+  color: #fff!important
+}
+
+.lamborghini__submenu .lamborghini__subitem:before {
+  background: rgba(0,0,0,.4);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1
+}
+
+.lamborghini__submenu .lamborghini__subitem a {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-family: "lamborghini Monospace Regular";
+  font-size: 28.41px;
+  height: 100%;
+  justify-content: center;
+  letter-spacing: -1.03px;
+  line-height: 1;
+  min-height: 90px;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  width: 280px;
+  z-index: 2
+}
+
+@media only screen and (max-width: 1439px) {
+  .lamborghini__submenu .lamborghini__subitem a {
+      font-size:24px
+  }
+}
+
+@media only screen and (max-width: 1269px) {
+  .lamborghini__submenu .lamborghini__subitem a {
+      font-size:20px;
+      letter-spacing: 0
+  }
+}
+
+.lamborghini__submenu .lamborghini__subitem:first-child {
+  margin-left: 0
+}
+
+.lamborghini__submenu .lamborghini__subitem:last-child {
+  margin-right: 0
+}
+
+.lamborghini__nav-item {
+  color: #fff;
+  counter-increment: my-awesome-counter;
+  margin-bottom: .5rem;
+  text-decoration: none
+}
+
+.lamborghini__nav-item>a {
+  font-size: 100px;
+  margin: 0;
+  padding: 0
+}
+
+.lamborghini__nav-item>a:before {
+  color: inherit;
+  content: "0" counter(my-awesome-counter);
+  font-family: "lamborghini Monospace Regular";
+  font-size: 28px;
+  left: -2px;
+  letter-spacing: 0;
+  line-height: 1;
+  position: relative;
+  top: -67px
+}
+
+.lamborghini__nav-item a {
+  color: inherit;
+  color: #fff;
+  font-family: lamborghini Display Regular;
+  font-size: 127.6px;
+  font-weight: 400;
+  letter-spacing: -4.64px;
+  line-height: 100.24px;
+  text-decoration: none
+}
+
+#footer {
+  bottom: 0;
+  color: #fff;
+  display: block;
+  padding-bottom: 20px;
+  position: fixed;
+  width: 100%
+  
+}
+
+.lamborghini__footer_navigation,.lamborghini__social_navigation {
+  color: #fff;
+  color: inherit;
+  display: block;
+  font-family: "lamborghini Monospace Regular",Courier,monospace;
+  font-size: 12px;
+  letter-spacing: -.43px;
+  line-height: 17px;
+  padding: 5px 10px;
+  text-align: center;
+  width: 100%
+}
+
+.lamborghini__footer_navigation .lamborghini__subitem,.lamborghini__social_navigation .lamborghini__subitem {
+  color: inherit;
+  display: inline-block;
+  font: inherit;
+  font-family: "lamborghini Monospace Regular";
+  height: auto;
+  margin: 0 auto;
+  padding: 2px 10px;
+  width: auto
+}
+
+.lamborghini__footer_navigation .lamborghini__subitem a,.lamborghini__social_navigation .lamborghini__subitem a {
+  color: #fff;
+  font: inherit;
+  font-size: 12px;
+  height: 100%;
+  text-decoration: none;
+  transition: all .7s ease;
+  width: 100%
+}
+
+.lamborghini__footer_navigation {
+  letter-spacing: -.43px
+}
+
+.lamborghini__footer_navigation .lamborghini__subitem {
+  padding: 2px 10px
+}
+
+.lamborghini__footer_navigation .lamborghini__subitem a {
+  font: inherit
+}
+
+.lamborghini__social_navigation {
+  margin-bottom: 10px
+}
+
+.lamborghini__social_navigation .lamborghini__subitem {
+  height: 12px;
+  padding: 0 5px
+}
+
+.lamborghini__social_navigation .lamborghini__subitem a {
+  -o-object-fit: contain;
+  object-fit: contain
+}
+
+.lamborghini__social_navigation .lamborghini__subitem a img {
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  width: 100%
+}
+
+@media only screen and (max-width: 1269px) {
+  .lamborghini__nav-item a {
+      font-size:87.6px;
+      letter-spacing: -4.64px;
+      line-height: 70.24px
+  }
+
+  .lamborghini__nav-item>a:before {
+      font-size: 23px;
+      left: -5px;
+      letter-spacing: 0;
+      line-height: 1;
+      top: -45px
+  }
+
+  .lamborghini__main_navigation .lamborghini__nav-item {
+      height: 70px
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__main-link--desktop {
+      display:none
+  }
+
+  .lamborghini__main-link--mobile {
+      display: inline-block
+  }
+
+  .lamborghini__brand-name {
+      display: none
+  }
+
+  .lamborghini__main_navigation .lamborghini__nav-item {
+      height: 65px
+  }
+
+  #nav {
+      margin-bottom: 50px
+  }
+
+  .lamborghini__main_navigation .lamborghini__nav-item-1>a {
+      margin-left: 50px
+  }
+
+  .lamborghini__main_navigation .lamborghini__nav-item-2>a {
+      margin-left: -60px
+  }
+
+  .lamborghini__main_navigation .lamborghini__nav-item-3>a {
+      margin-left: -20px
+  }
+
+  .lamborghini__main_navigation .lamborghini__nav-item-4>a {
+      margin-left: 0
+  }
+
+  .lamborghini__main_navigation .lamborghini__nav-item-5>a {
+      margin-left: 40px
+  }
+
+  .lamborghini__main_navigation .lamborghini__nav-item {
+      height: auto;
+      margin: 0 0 5px
+  }
+
+  .lamborghini__main_navigation .lamborghini__nav-item>a {
+      color: #fff;
+      font-family: lamborghini Display Regular;
+      font-size: 51px;
+      font-weight: 400;
+      letter-spacing: -2px;
+      line-height: 40px
+  }
+
+  .lamborghini__submenu .lamborghini__subitem {
+      margin: 0 5px
+  }
+
+  .lamborghini__submenu .lamborghini__subitem a {
+      font-size: 19px;
+      font-weight: 400;
+      letter-spacing: -.73px;
+      min-height: 70px;
+      min-height: 65px;
+      width: 190px
+  }
+
+  .lamborghini__submenu .lamborghini__subitem:first-child {
+      margin-left: 0
+  }
+
+  .lamborghini__submenu .lamborghini__subitem:last-child {
+      margin-right: 0
+  }
+
+  .lamborghini__nav-item a {
+      line-height: 1
+  }
+
+  .lamborghini__nav-item>a:before {
+      font-family: "lamborghini Monospace Regular";
+      font-size: 12px;
+      font-size: 14px;
+      left: 4px;
+      top: -26px
+  }
+
+  .lamborghini__scroller {
+      margin-top: 7px;
+      position: relative;
+      top: -75px
+  }
+}
+
+.lamborghini__nav-item .lamborghini__arrow-right {
+  background-color: #000;
+  background-size: 15px;
+  bottom: 0;
+  content: "";
+  display: block;
+  display: none;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 30px;
+  z-index: 20
+}
+
+.lamborghini__nav-item .lamborghini__arrow-right .icon {
+  background: #000 url(e868ba2bc27380fe38b2.svg) no-repeat 50%;
+  display: block;
+  height: 100%;
+  width: 100%
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__nav-item .lamborghini__arrow-right {
+      height:70px;
+      top: auto;
+      width: 20px
+  }
+
+  .lamborghini__nav-item .lamborghini__arrow-right .icon {
+      background-size: 10px
+  }
+}
+
+.lamborghini__nav-item .lamborghini__arrow-right {
+  left: auto;
+  right: 0
+}
+
+.lamborghini__nav-item.active .lamborghini__arrow-right {
+  display: block
+}
+
+.lamborghini__sub-nav-bar__overlay {
+  background-color: #000;
+  left: 50%;
+  opacity: 0;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  visibility: hidden
+}
+
+.lamborghini__pre-loader,.lamborghini__pre-loader__quick,.lamborghini__sub-nav-bar__overlay {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  width: 100vw;
+  z-index: 99999
+}
+
+.lamborghini__pre-loader,.lamborghini__pre-loader__quick {
+  background: #000;
+  left: 0;
+  top: 0
+}
+
+.lamborghini__pre-loader__wrap {
+  padding: 0 50px;
+  width: 100%
+}
+
+.lamborghini__pre-loader__text {
+  margin-bottom: 100px;
+  margin-top: 150px
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__pre-loader__text {
+      margin-bottom:100px;
+      margin-top: 100px;
+      min-height: 70px
+  }
+}
+
+.lamborghini__pre-loader__copy {
+  color: #fff;
+  font-family: lamborghini Display Regular,sans-serif,Arial;
+  font-size: 200px;
+  letter-spacing: -8.5px;
+  text-align: center;
+  width: 100%
+}
+
+.lamborghini__progress_loader {
+  left: 0;
+  margin: 0 auto;
+  text-align: center
+}
+
+.lamborghini__progress_loader-wrapper {
+  background: gray;
+  display: inline-flex;
+  height: 5px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 900px
+}
+
+.lamborghini__progress_loader__loading {
+  background-color: #004bfa;
+  width: 0
+}
+
+.lamborghini__progress_loader__info {
+  color: #4b4b4b;
+  font-family: "lamborghini Monospace Regular";
+  font-size: 16px;
+  margin: 20px 0;
+  text-align: center;
+  text-transform: uppercase
+}
+
+.lamborghini__pre-loader__intro {
+  display: block;
+  height: 100vh;
+  opacity: 0
+}
+
+.lamborghini__pre-loader__heading,.lamborghini__pre-loader__intro {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.lamborghini__pre-loader__heading {
+  bottom: 0;
+  color: #fff;
+  font-size: 400px;
+  font-size: 200px;
+  height: 100%;
+  height: 100vh;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  transform: scale(0);
+  white-space: nowrap
+}
+
+@media only screen and (max-width: 1269px) {
+  .lamborghini__pre-loader__copy {
+      font-size:13vw
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__pre-loader__copy {
+      font-size:55px;
+      letter-spacing: -2.5px
+  }
+
+  .lamborghini__progress_loader {
+      bottom: 100px;
+      padding: 0;
+      position: static;
+      width: 100%
+  }
+
+  .lamborghini__progress_loader__info {
+      font-size: 12px;
+      margin: 5px 0
+  }
+
+  .lamborghini__pre-loader__wrap {
+      padding: 0 20px
+  }
+
+  .lamborghini__pre-loader__copy {
+      font-size: 40px
+  }
+}
+
+.lamborghini__modal {
+  background: #000;
+  height: 100vH;
+  width: 100%
+}
+
+.lamborghini__modal-overlay {
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 11
+}
+
+.lamborghini__modal video {
+  height: 100vH;
+  width: 100%
+}
+
+.lamborghini__unintro-media-inner {
+  display: flex;
+  height: 100%;
+  min-width: 100vw;
+  position: absolute;
+  z-index: -1
+}
+
+.lamborghini__unintro-media-inner img,.lamborghini__unintro-media-inner video {
+  height: 100vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100vw
+}
+
+a {
+  cursor: none
+}
+
+.cursor {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 100%;
+  display: flex;
+  height: 20px;
+  opacity: 1;
+  pointer-events: none;
+  position: fixed;
+  transform: scale(1) translate(-.5rem,-.5rem);
+  transform-origin: center center;
+  transition: transform .3s cubic-bezier(.75,-1.27,.3,2.33),opacity .3s cubic-bezier(.75,-.27,.3,1.33);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  width: 20px;
+  z-index: 1;
+  z-index: 1000000
+}
+
+@media only screen and (max-width: 767px) {
+  .cursor {
+      display:none
+  }
+}
+
+.cursor.hovered {
+  opacity: 1.0
+}
+
+.cursor-follower {
+  background-color: rgba(175, 170, 148, 0.425);
+  border-radius: 100%;
+  height: 30px;
+  pointer-events: none;
+  position: fixed;
+  transform: translate(1px,1px);
+  transition: transform .3s cubic-bezier(.75,-1.27,.3,2.33),opacity .3s cubic-bezier(.75,-.27,.3,1.33);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  width: 30px;
+  z-index: 1;
+  z-index: 1000000
+}
+
+@media only screen and (max-width: 767px) {
+  .cursor-follower {
+      display:none
+  }
+}
+
+.cursor-follower:before {
+  background-color: #000;
+  border-radius: 100%;
+  content: "";
+  display: block;
+  height: 100%;
+  opacity: 0;
+  transition: all .7s ease;
+  width: 100%;
+  z-index: 0
+}
+
+.cursor-follower.clicked:before {
+  opacity: 1;
+  transform: scale(0)
+}
+
+.cursor-follower.active {
+  opacity: .7
+}
+
+.cursor-follower.hovered {
+  opacity: .08
+}
+
+@media (prefers-reduced-motion:no-preference) {
+  html {
+      scroll-behavior: smooth
+  }
+}
+
+.lamborghini__section_nav_overlay {
+  background: #000;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: calc(152px - 100vh);
+  visibility: hidden;
+  width: 100vw
+}
+
+.lamborghini__section_nav {
+  bottom: 110px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  z-index: 99
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__section_nav {
+      bottom:100px
+  }
+}
+
+.lamborghini__section_nav-arrow-wrapper {
+  bottom: 22px;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+  width: 1065px;
+  z-index: 99
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__section_nav-arrow-wrapper {
+      bottom:26px;
+      max-width: calc(100% - 100px);
+      width: 100%
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__section_nav-arrow-wrapper {
+      bottom:16px
+  }
+}
+
+.lamborghini__section_nav-arrow-prev {
+  bottom: 2px;
+  color: #fff;
+  left: -30px;
+  position: absolute;
+  z-index: 99
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__section_nav-arrow-prev {
+      font-size:11px
+  }
+}
+
+.lamborghini__section_nav-arrow-next {
+  bottom: 2px;
+  color: #fff;
+  position: absolute;
+  right: -30px;
+  z-index: 99
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__section_nav-arrow-next {
+      font-size:11px
+  }
+}
+
+.lamborghini__section_nav-inner {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 100%
+}
+
+.lamborghini__section_nav-inner-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+  margin: auto;
+  max-width: 1050px;
+  overflow: hidden;
+  position: relative
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__section_nav-inner-wrapper {
+      max-width:calc(100% - 80px)
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__section_nav-inner-wrapper {
+      top:10px
+  }
+}
+
+.lamborghini__section_nav-line {
+  align-items: center;
+  background: hsla(0,0%,100%,.3);
+  display: flex;
+  flex-direction: row;
+  height: 2px;
+  justify-content: flex-start;
+  margin: 20px auto 0;
+  max-width: 1130px;
+  overflow: hidden;
+  position: relative;
+  width: 100%
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__section_nav-line {
+      margin:20px 20px 0;
+      width: calc(100% - 40px)
+  }
+}
+
+.lamborghini__section_nav-line-selector {
+  background: #fff;
+  height: 2px;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  width: 115px
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__section_nav-line-selector {
+      width:80px
+  }
+}
+
+.lamborghini__section_nav a {
+  color: gray;
+  font-family: lamborghini Text Regular,serif;
+  text-decoration: none
+}
+
+.lamborghini__section_nav a.active {
+  color: #fff
+}
+
+.lamborghini__language,.lamborghini__sound {
+  font-size: 12px;
+  min-width: 50px;
+  padding: 11px
+}
+
+.lamborghini__settings-bar {
+  align-items: center;
+  bottom: 40px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  position: fixed;
+  width: 100%;
+  z-index: 100
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__settings-bar {
+      bottom:40px
+  }
+}
+
+.lamborghini__settings-bar-inner {
+  align-items: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: hsla(0,0%,100%,.08);
+  box-shadow: 0 0 0 rgba(0,0,0,.6);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 20px;
+  max-width: 1130px;
+  padding: 7px 64px;
+  width: 100%
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__settings-bar-inner {
+      font-size:10px;
+      padding: 7px 15px
+  }
+}
+
+.lamborghini__settings-logo {
+  max-height: 25px
+}
+
+.lamborghini__subnav-item {
+  font-size: 13px;
+  position: absolute;
+  text-align: center
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__subnav-item {
+      font-size:12px
+  }
+}
+
+.lamborghini__subnav-items {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: relative;
+  white-space: nowrap
+}
+
+.lamborghini__language-container:before {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: hsla(0,0%,100%,.08);
+  box-shadow: 0 0 0 rgba(0,0,0,.6);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 110px
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__language-container:before {
+      width:100px
+  }
+}
+
+.lamborghini__language-container {
+  bottom: 75px;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 1130px;
+  padding: 20px 20px 0 40px;
+  position: fixed;
+  width: 100%;
+  z-index: 1001
+}
+
+@media only screen and (max-width: 1158px) {
+  .lamborghini__language-container {
+      padding:20px 20px 0 60px
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__language-container {
+      left:0;
+      padding: 20px 20px 0 60px
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__language-container {
+      bottom:68px;
+      left: 0;
+      padding: 20px 20px 0
+  }
+}
+
+.lamborghini__language-container hr {
+  display: flex;
+  margin: 10px 0 10px 20px;
+  width: 35px
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__language-container hr {
+      margin:10px 0 10px 17px
+  }
+}
+
+.lamborghini__language-container hr:last-child {
+  display: none
+}
+
+.lamborghini__language-container-inner {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 3px 0 3px 17px;
+  text-decoration: none;
+  z-index: 10001
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__language-container-inner {
+      padding-left:13px
+  }
+}
+
+.lamborghini__fuel_info {
+  align-items: center;
+  bottom: 0;
+  color: #ccc;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  position: fixed;
+  width: 100%;
+  z-index: 101;
+  z-index: 1001
+}
+
+.lamborghini__fuel_info-wrap {
+  align-items: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: hsla(0,0%,100%,.08);
+  box-shadow: 0 0 0 rgba(0,0,0,.6);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 20px;
+  max-width: 1130px;
+  position: relative;
+  width: 100%
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__fuel_info-wrap {
+      padding:0
+  }
+}
+
+.lamborghini__fuel_info-small-wrapper {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 14px;
+  height: 30px;
+  justify-content: center;
+  position: relative;
+  width: 100%
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__fuel_info-small-wrapper {
+      font-size:10px
+  }
+}
+
+.lamborghini__fuel_info-arrow-open {
+  align-items: center;
+  bottom: -5px;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  position: absolute;
+  right: 70px;
+  transform: rotate(-90deg);
+  width: 40px;
+  z-index: 9
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__fuel_info-arrow-open {
+      right:15px
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__fuel_info-arrow-open {
+      bottom:0;
+      height: 30px;
+      right: 5px;
+      width: 30px
+  }
+}
+
+.lamborghini__fuel_info-arrow-open img {
+  height: 18px;
+  width: 18px
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__fuel_info-arrow-open img {
+      height:10px;
+      width: 10px
+  }
+}
+
+.lamborghini__fuel_info-item {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 20px;
+  position: relative
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__fuel_info-item {
+      margin:0 5px
+  }
+}
+
+.lamborghini__fuel_info-item img {
+  margin: -5px 5px;
+  width: 25px
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__fuel_info-item img {
+      margin:-2px 3px;
+      width: 10px
+  }
+}
+
+.lamborghini__fuel_info-icon {
+  white-space: nowrap
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__fuel_info-icon {
+      font-size:12px;
+      margin: 5px 0
+  }
+}
+
+.lamborghini__fuel_info-icon span {
+  white-space: nowrap
+}
+
+.lamborghini__fuel_info-arrow-close {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 30px;
+  transform: rotate(90deg);
+  width: 50px;
+  z-index: 9
+}
+
+.lamborghini__fuel_info-arrow-close img {
+  height: 18px;
+  width: 18px
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__fuel_info-arrow-close img {
+      height:15px;
+      width: 15px
+  }
+
+  .lamborghini__fuel_info-arrow-close {
+      right: 0;
+      top: 10px
+  }
+}
+
+.lamborghini__fuel_info-big-wrapper {
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  font-size: 14px;
+  justify-content: flex-start;
+  max-height: 290px;
+  min-height: 150px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 50px 25px;
+  position: relative;
+  width: 100%
+}
+
+.lamborghini__fuel_info-big-wrapper::-webkit-scrollbar {
+  width: 1px
+}
+
+.lamborghini__fuel_info-big-wrapper::-webkit-scrollbar-track {
+  border-radius: 0;
+  box-shadow: inset 0 0 5px hsla(0,0%,100%,.314)
+}
+
+.lamborghini__fuel_info-big-wrapper::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__fuel_info-big-wrapper {
+      max-height:485px;
+      padding: 20px
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__fuel_info-big-wrapper {
+      font-size:10px;
+      max-height: 335px;
+      padding: 20px
+  }
+}
+
+.lamborghini__fuel_info-big-item {
+  display: grid;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-columns: 20% 40% 40%;
+  grid-template-rows: 1fr;
+  margin: 20px 0;
+  width: 100%
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__fuel_info-big-item {
+      gap:0 10px;
+      grid-template-columns: 100%;
+      grid-template-rows: 1fr 1fr 1fr;
+      margin: 5px 0
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__fuel_info-big-item {
+      display:flex;
+      flex-direction: column
+  }
+}
+
+.lamborghini__fuel_info-big-item img {
+  height: 30px;
+  margin: -10px 10px -10px 0;
+  width: 30px
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__fuel_info-big-item img {
+      height:20px;
+      margin: -5px 5px -5px 0;
+      width: 20px
+  }
+}
+
+.lamborghini__fuel_info-model {
+  font-weight: 700;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__fuel_info-model {
+      margin:10px 0
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__fuel_info-model {
+      margin:5px 0
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__fuel_info-fuel {
+      margin:20px 0
+  }
+}
+
+.lamborghini__fuel_info-level {
+  align-items: center;
+  background: transparent;
+  color: #fff;
+  display: flex;
+  height: 20px;
+  justify-content: center;
+  position: relative;
+  width: 20px
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__fuel_info-level {
+      font-size:8px;
+      height: 16px;
+      width: 16px
+  }
+}
+
+.lamborghini__fuel_info-level:before {
+  border-color: transparent;
+  border-style: solid;
+  border-width: 10px 0;
+  border-left: 10px solid var(--levelBgColor);
+  content: "";
+  height: 0;
+  position: absolute;
+  right: -10px;
+  top: 0;
+  width: 0
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__fuel_info-level:before {
+      border-bottom-width:8px;
+      border-left: 8px solid var(--levelBgColor);
+      border-top-width: 8px;
+      right: -8px
+  }
+}
+
+.lamborghini__fuel_info-big-level {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 150px
+}
+
+.lamborghini__fuel_info-level-item {
+  align-items: center;
+  background: #38b045;
+  color: #fff;
+  display: flex;
+  font-size: 10px;
+  height: 16px;
+  margin-top: 2px;
+  padding: 0 3px;
+  position: relative;
+  width: 42px
+}
+
+.lamborghini__fuel_info-level-item.active {
+  font-size: 16px;
+  height: 30px
+}
+
+.lamborghini__fuel_info-level-item.active span {
+  font-size: 12px;
+  margin-left: 5px
+}
+
+.lamborghini__fuel_info-level-item.active span span {
+  font-size: 8px;
+  margin-left: 2px
+}
+
+.lamborghini__fuel_info-level-item:before {
+  border-left: 0 solid transparent;
+  border-color: transparent transparent transparent #38b045;
+  border-style: solid;
+  border-width: 8px 0 8px 8px;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: -8px;
+  top: 0;
+  width: 0
+}
+
+.lamborghini__fuel_info-level-item.active:before {
+  border-left: 0 solid transparent;
+  border-color: transparent transparent transparent #38b045;
+  border-style: solid;
+  border-width: 15px 0 15px 15px;
+  right: -15px
+}
+
+.lamborghini__fuel_info-level-item:nth-child(2) {
+  background: #3dc330;
+  width: 56px
+}
+
+.lamborghini__fuel_info-level-item:nth-child(2):before {
+  border-left: 8px solid #3dc330
+}
+
+.lamborghini__fuel_info-level-item:nth-child(2).active:before {
+  border-left: 15px solid #3dc330
+}
+
+.lamborghini__fuel_info-level-item:nth-child(3) {
+  background: #abe030;
+  width: 70px
+}
+
+.lamborghini__fuel_info-level-item:nth-child(3):before {
+  border-left: 8px solid #abe030
+}
+
+.lamborghini__fuel_info-level-item:nth-child(3).active:before {
+  border-left: 15px solid #abe030
+}
+
+.lamborghini__fuel_info-level-item:nth-child(4) {
+  background: #f6fa3a;
+  width: 84px
+}
+
+.lamborghini__fuel_info-level-item:nth-child(4):before {
+  border-left: 8px solid #f6fa3a
+}
+
+.lamborghini__fuel_info-level-item:nth-child(4).active:before {
+  border-left: 15px solid #f6fa3a
+}
+
+.lamborghini__fuel_info-level-item:nth-child(5) {
+  background: #f2bc2e;
+  width: 98px
+}
+
+.lamborghini__fuel_info-level-item:nth-child(5):before {
+  border-left: 8px solid #f2bc2e
+}
+
+.lamborghini__fuel_info-level-item:nth-child(5).active:before {
+  border-left: 15px solid #f2bc2e
+}
+
+.lamborghini__fuel_info-level-item:nth-child(6) {
+  background: #ee6620;
+  width: 112px
+}
+
+.lamborghini__fuel_info-level-item:nth-child(6):before {
+  border-left: 8px solid #ee6620
+}
+
+.lamborghini__fuel_info-level-item:nth-child(6).active:before {
+  border-left: 15px solid #ee6620
+}
+
+.lamborghini__fuel_info-level-item:nth-child(7) {
+  background: #ed371b;
+  width: 126px
+}
+
+.lamborghini__fuel_info-level-item:nth-child(7):before {
+  border-left: 8px solid #ed371b
+}
+
+.lamborghini__fuel_info-level-item:nth-child(7).active:before {
+  border-left: 15px solid #ed371b
+}
+
+.dp_none {
+  display: none
+}
+
+.showLevel .lamborghini__fuel_info-big-wrapper .lamborghini__fuel_info-big-item {
+  grid-template-areas: "a d" ". d" ". d";
+  grid-template-columns: 25%;
+  grid-template-rows: 1fr
+}
+
+@media only screen and (max-width: 1023px) {
+  .showLevel .lamborghini__fuel_info-big-wrapper .lamborghini__fuel_info-big-item {
+      grid-template-areas:"a" "d";
+      grid-template-columns: 100%;
+      grid-template-rows: 1fr
+  }
+}
+
+.showLevel .lamborghini__fuel_info-big-wrapper .lamborghini__fuel_info-model {
+  grid-area: a;
+  padding-bottom: 20px
+}
+
+@media only screen and (max-width: 767px) {
+  .showLevel .lamborghini__fuel_info-big-wrapper .lamborghini__fuel_info-model {
+      padding-bottom:0
+  }
+}
+
+.showLevel .lamborghini__fuel_info-big-wrapper .lamborghini__fuel_info-consumption {
+  grid-area: a;
+  margin-top: 60px
+}
+
+@media only screen and (max-width: 767px) {
+  .showLevel .lamborghini__fuel_info-big-wrapper .lamborghini__fuel_info-consumption {
+      margin-top:10px;
+      padding-bottom: 0
+  }
+}
+
+.showLevel .lamborghini__fuel_info-big-wrapper .lamborghini__fuel_info-emissions {
+  grid-area: a;
+  margin-top: 25px
+}
+
+@media only screen and (max-width: 767px) {
+  .showLevel .lamborghini__fuel_info-big-wrapper .lamborghini__fuel_info-emissions {
+      margin-top:10px
+  }
+}
+
+.showLevel .lamborghini__fuel_info-big-wrapper .lamborghini__fuel_info-big-level {
+  grid-area: d;
+  margin-left: 110px
+}
+
+@media only screen and (max-width: 1023px) {
+  .showLevel .lamborghini__fuel_info-big-wrapper .lamborghini__fuel_info-big-level {
+      margin-left:0;
+      margin-top: 20px
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .showLevel .lamborghini__fuel_info-big-wrapper .lamborghini__fuel_info-big-level {
+      margin-top:5px
+  }
+}
+
+.showLevel.showLevelMulti .lamborghini__fuel_info-big-wrapper {
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-height: 430px
+}
+
+.showLevel.showLevelMulti .lamborghini__fuel_info-big-wrapper .lamborghini__fuel_info-big-item {
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  width: 50%
+}
+
+@media only screen and (max-width: 767px) {
+  .showLevel.showLevelMulti .lamborghini__fuel_info-big-wrapper .lamborghini__fuel_info-big-item {
+      width:100%
+  }
+}
+
+.lamborghini__panel-asset {
+  opacity: 0;
+  visibility: hidden
+}
+
+.lamborghini__unintro {
+  height: 100vh;
+  position: relative;
+  width: 100%
+}
+
+.lamborghini__unintro-wrap {
+  background-position: 50%;
+  background-size: cover;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100vh;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  position: relative;
+  width: auto
+}
+
+.lamborghini__unintro-panel {
+  width: 100vw
+}
+
+.lamborghini__unintro-panel-inner {
+  display: flex;
+  height: 100%;
+  min-width: 100vw
+}
+
+.lamborghini__unintro-panel-inner img,.lamborghini__unintro-panel-inner video {
+  height: 100vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100vW
+}
+
+.lamborghini__unintro-panel-description-wrapper {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1130px
+}
+
+.lamborghini__unintro .lamborghini__iv-section {
+  height: 100vh;
+  min-height: 100vh;
+  min-width: 100vw;
+  width: 100vw
+}
+
+.lamborghini__miau {
+  display: flex;
+  height: 100vh;
+  position: relative
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__miau {
+      overflow:visible
+  }
+}
+
+.lamborghini__miau-cards {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 90vh
+}
+
+.lamborghini__miau-card {
+  font-family: sans-serif;
+  font-size: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 300px
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__miau-card {
+      width:240px
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__miau-card {
+      width:300px
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .lamborghini__miau-card {
+      width:255px
+  }
+}
+
+.lamborghini__miau-card-wrapper-outter {
+  margin-right: 100px;
+  transition: all .5s
+}
+
+.lamborghini__miau-card-wrapper-outter:hover {
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,.4);
+  scale: 1.05;
+  transition: all .5s
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__miau-card-wrapper-outter {
+      margin-right:48px
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__miau-card-wrapper-outter {
+      margin-right:60px
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .lamborghini__miau-card-wrapper-outter {
+      margin-right:20px
+  }
+}
+
+.lamborghini__miau-card-category {
+  color: #fff;
+  padding-bottom: 5px;
+  text-align: right
+}
+
+.lamborghini__miau-card-wrapper:hover {
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,.81);
+  scale: 1.05;
+  transition: all 2s
+}
+
+.lamborghini__miau-card-inner {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  max-height: 460px;
+  position: relative
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__miau-card-inner {
+      max-height:368px
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__miau-card-inner {
+      max-height:460px
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .lamborghini__miau-card-inner {
+      max-height:395px
+  }
+}
+
+.lamborghini__miau-card-inner-text {
+  bottom: 15px;
+  padding: 0 20px;
+  position: absolute;
+  width: 100%
+}
+
+.lamborghini__miau-card img {
+  height: 400px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%
+}
+
+.lamborghini__miau-card h2 {
+  color: #fff;
+  font-family: lamborghini Text Regular,sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 35px;
+  margin-bottom: 0;
+  text-align: center;
+  z-index: 100
+}
+
+.lamborghini__miau-card p {
+  color: #fff;
+  font-family: lamborghini Text Regular,sans-serif;
+  font-size: 22px;
+  line-height: 22px;
+  padding: 10px
+}
+
+.lamborghini__miau-card-image,.lamborghini__miau-card-video {
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: auto
+}
+
+.lamborghini__miau-card-image--poster {
+  background-position: 50%;
+  background-repeat: none;
+  background-size: cover;
+  -o-object-fit: cover;
+  object-fit: cover;
+  pointer-events: none;
+  position: absolute;
+  transition: all .5s ease;
+  z-index: 0
+}
+
+.lamborghini__miau-card-image--poster,.lamborghini__miau-card:hover .lamborghini__miau-card-image--poster {
+  height: 100%!important;
+  width: 100%!important
+}
+
+.lamborghini__progress {
+  display: none;
+  width: 25%
+}
+
+.lamborghini__progress-1 {
+  left: 0
+}
+
+.lamborghini__progress-2 {
+  left: 25%
+}
+
+.lamborghini__progress-3 {
+  left: 50%
+}
+
+.lamborghini__progress-4 {
+  left: 75%
+}
+
+.lamborghini__progress-cards {
+  align-items: center;
+  bottom: 130px;
+  display: none;
+  justify-content: center;
+  margin: 0 auto;
+  position: fixed;
+  width: 100%
+}
+
+@media only screen and (max-width: 1269px) {
+  .lamborghini__progress-cards {
+      bottom:100px
+  }
+}
+
+.lamborghini__progress-cards-wrapper {
+  background: #000;
+  display: inline-flex;
+  height: 5px;
+  width: 900px
+}
+
+.lamborghini__wrapper {
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%
+}
+
+.lamborghini__intro {
+  background-color: #000;
+  color: #fff;
+  font-size: 2em;
+  height: 100vh;
+  line-height: 100vh;
+  position: relative;
+  text-align: center
+}
+
+.lamborghini__intro-text {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 1001
+}
+
+.lamborghini__intro-text .lamborghini__intro-line {
+  display: flex;
+  max-width: 740px;
+  overflow: hidden;
+  position: relative
+}
+
+.lamborghini__intro-text .lamborghini__intro-line a:hover {
+  color: #004bfa
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__intro-text .lamborghini__intro-line {
+      padding:0 50px;
+      width: 100%
+  }
+}
+
+.lamborghini__intro-text .lamborghini__intro-line span {
+  font-size: 3rem;
+  line-height: 3rem
+}
+
+.lamborghini__intro-text .lamborghini__intro-welcome span {
+  font-family: "lamborghini Monospace Regular",sans-serif;
+  font-size: 22px;
+  line-height: 22px;
+  margin-bottom: 10px
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__intro-text .lamborghini__intro-welcome span {
+      font-size:14px;
+      line-height: 14px
+  }
+}
+
+.lamborghini__intro-text .lamborghini__intro-quote span {
+  font-family: lamborghini Display Regular,sans-serif;
+  font-size: 65px;
+  line-height: 65px;
+  padding-bottom: 8px
+}
+
+@media only screen and (max-width: 1269px) {
+  .lamborghini__intro-text .lamborghini__intro-quote span {
+      font-size:45px;
+      line-height: 45px
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__intro-text .lamborghini__intro-quote span {
+      font-size:40px;
+      line-height: 40px
+  }
+
+  .lamborghini__intro-text .lamborghini__intro-author {
+      margin-bottom: 10px
+  }
+}
+
+.lamborghini__intro-text .lamborghini__intro-author span {
+  font-family: "lamborghini Monospace Regular",sans-serif;
+  font-size: 13px;
+  line-height: 13px;
+  margin-bottom: 20px
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__intro-text .lamborghini__intro-author span {
+      font-size:13px
+  }
+}
+
+.lamborghini__intro-text .lamborghini__description span {
+  font-family: lamborghini Text Regular,sans-serif;
+  font-size: 22px;
+  line-height: 28px
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__intro-text .lamborghini__description span {
+      font-size:18px;
+      line-height: 24px;
+      margin-top: 0
+  }
+}
+
+.lamborghini__intro-center-center {
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%,-50%)
+}
+
+.lamborghini__intro-center-center .lamborghini__intro-line {
+  justify-content: center
+}
+
+.lamborghini__intro-center-center .lamborghini__intro-line a {
+  color: #fff
+}
+
+.lamborghini__intro-left-bottom {
+  align-items: flex-start;
+  bottom: 200px;
+  justify-content: flex-end;
+  max-width: 1130px
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__intro-left-bottom {
+      bottom:240px
+  }
+}
+
+.lamborghini__intro-left-bottom .lamborghini__intro-quote span {
+  font-size: 32px;
+  line-height: 32px;
+  padding-bottom: 8px;
+  text-align: left
+}
+
+.lamborghini__intro-left-bottom .lamborghini__intro-line {
+  max-width: 450px
+}
+
+.lamborghini__intro-left-bottom .lamborghini__description span {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  justify-content: flex-start;
+  text-align: left
+}
+
+.lamborghini__intro-left-bottom .lamborghini__link {
+  height: 30px
+}
+
+.lamborghini__intro-left-bottom .lamborghini__link span {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  justify-content: flex-start;
+  text-align: left
+}
+
+.lamborghini__intro-left-bottom a {
+  color: #fff
+}
+
+.lamborghini__intro-right-top {
+  align-items: end;
+  justify-content: flex-start;
+  margin-top: 50px;
+  max-width: 1130px;
+  top: 50px
+}
+
+.lamborghini__intro-right-top .lamborghini__intro-line {
+  max-width: 450px
+}
+
+.lamborghini__intro-right-top .lamborghini__intro-quote span {
+  font-size: 32px;
+  line-height: 32px;
+  padding-bottom: 8px;
+  text-align: right;
+  width: 100%
+}
+
+.lamborghini__intro-right-top .lamborghini__description span {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  justify-content: flex-start;
+  text-align: right;
+  width: 100%
+}
+
+.lamborghini__intro-right-top .lamborghini__link {
+  height: 30px
+}
+
+.lamborghini__intro-right-top .lamborghini__link span {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  justify-content: flex-start;
+  text-align: left
+}
+
+.lamborghini__intro-right-top a {
+  color: #fff
+}
+
+.lamborghini__intro-left-top {
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 50px;
+  max-width: 1130px;
+  top: 50px
+}
+
+.lamborghini__intro-left-top .lamborghini__intro-quote span {
+  font-size: 32px;
+  line-height: 32px;
+  padding-bottom: 8px;
+  text-align: left
+}
+
+.lamborghini__intro-left-top .lamborghini__intro-line {
+  max-width: 450px
+}
+
+.lamborghini__intro-left-top .lamborghini__description span {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  justify-content: flex-start;
+  text-align: left
+}
+
+.lamborghini__intro-left-top .lamborghini__link {
+  height: 30px
+}
+
+.lamborghini__intro-left-top .lamborghini__link span {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  justify-content: flex-start;
+  text-align: right
+}
+
+.lamborghini__intro-left-top a {
+  color: #fff
+}
+
+.lamborghini__intro-right-bottom {
+  align-items: flex-end;
+  bottom: 200px;
+  justify-content: flex-end;
+  max-width: 1130px
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__intro-right-bottom {
+      bottom:240px
+  }
+}
+
+.lamborghini__intro-right-bottom .lamborghini__intro-line {
+  max-width: 450px
+}
+
+.lamborghini__intro-right-bottom .lamborghini__intro-quote span {
+  font-size: 32px;
+  line-height: 32px;
+  padding-bottom: 8px;
+  text-align: right;
+  width: 100%
+}
+
+.lamborghini__intro-right-bottom .lamborghini__description span {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  justify-content: flex-start;
+  text-align: right;
+  width: 100%
+}
+
+.lamborghini__intro-right-bottom .lamborghini__link {
+  height: 30px
+}
+
+.lamborghini__intro-right-bottom .lamborghini__link span {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  justify-content: flex-start;
+  text-align: left
+}
+
+.lamborghini__intro-right-bottom a {
+  color: #fff
+}
+
+.bar {
+  height: 10px;
+  left: 25vw;
+  position: absolute;
+  top: calc(10vh - 5px);
+  transform-origin: left center;
+  width: 10vw
+}
+
+.lamborghini__modal {
+  align-items: center;
+  background: none;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: 99
+}
+
+.lamborghini__modal,.lamborghini__modal video,.lamborghini__modal-overlay {
+  height: 100vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100vw
+}
+
+.lamborghini__modal-overlay {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: #000;
+  background: rgba(0,0,0,.95)
+}
+
+.lamborghini__modal-card {
+  height: 100vh;
+  transform-origin: 0 0;
+  width: 100vw
+}
+
+.lamborghini__modal-card,.lamborghini__modal-card-mask {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+
+.lamborghini__modal-card-mask {
+  -webkit-clip-path: polygon(0 10%,100% 10%,100% 100%,0 100%);
+  clip-path: polygon(0 10%,100% 10%,100% 100%,0 100%);
+  height: 480px;
+  max-height: none;
+  overflow: hidden;
+  width: 300px
+}
+
+.lamborghini__iv_popup {
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+  width: 100vw;
+  z-index: 9
+}
+
+.lamborghini__textmodal-overlay {
+  background: rgba(0,0,0,.92);
+  display: flex;
+  height: 100%;
+  position: relative;
+  width: 100%
+}
+
+.lamborghini__textmodal-wrap {
+  display: flex;
+  height: calc(100% - 180px);
+  margin: 15vh auto 0;
+  max-width: 1130px;
+  position: relative;
+  width: 100%
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__textmodal-wrap {
+      flex-direction:column;
+      height: calc(100% - 260px);
+      margin: 80px auto 0;
+      padding: 0 30px 0 10px
+  }
+}
+
+.lamborghini__textmodal-wrap-mobile {
+  display: flex;
+  height: 100%;
+  position: relative;
+  width: 100%
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__textmodal-wrap-mobile {
+      flex-direction:column;
+      height: auto;
+      overflow-x: hidden;
+      overflow-y: scroll
+  }
+
+  .lamborghini__textmodal-wrap-mobile::-webkit-scrollbar {
+      width: 1px
+  }
+
+  .lamborghini__textmodal-wrap-mobile::-webkit-scrollbar-track {
+      border-radius: 0;
+      box-shadow: inset 0 0 5px hsla(0,0%,100%,.314);
+      margin-top: 20px
+  }
+
+  .lamborghini__textmodal-wrap-mobile::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 10px
+  }
+}
+
+.lamborghini__textmodal-imageBlock {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 415px
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__textmodal-imageBlock {
+      padding:0 30px;
+      width: 100%
+  }
+}
+
+.lamborghini__textmodal-imageBlockTitle {
+  color: #ccc;
+  font-size: 32px;
+  line-height: 1.6;
+  margin-top: 20px;
+  text-transform: uppercase
+}
+
+.lamborghini__textmodal-imageBlockSubTitle {
+  color: #ccc;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 10px;
+  text-transform: uppercase
+}
+
+.lamborghini__textmodal-image {
+  display: flex;
+  height: auto;
+  width: 415px
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__textmodal-image {
+      width:100%
+  }
+}
+
+.lamborghini__textmodal-text {
+  color: #ccc;
+  font-size: 16px;
+  height: calc(100% - 200px);
+  line-height: 1.6;
+  overflow-y: scroll;
+  padding: 0 30px
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__textmodal-text {
+      height:auto;
+      margin-top: 30px;
+      overflow-y: initial
+  }
+}
+
+.lamborghini__textmodal-text::-webkit-scrollbar {
+  width: 1px
+}
+
+.lamborghini__textmodal-text::-webkit-scrollbar-track {
+  border-radius: 0;
+  box-shadow: inset 0 0 5px hsla(0,0%,100%,.314);
+  margin-top: 50px
+}
+
+.lamborghini__textmodal-text::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px
+}
+
+.lamborghini__textmodal-close-btn {
+  height: 50px;
+  position: absolute;
+  right: -25px;
+  top: -10px;
+  width: 50px;
+  z-index: 9
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__textmodal-close-btn {
+      height:30px;
+      right: 16px;
+      top: -10px;
+      width: 30px
+  }
+}
+
+.lamborghini__textmodal-close-btn span {
+  background: #a7a7a7;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform-origin: 0 0;
+  transition: all .2s ease-in-out;
+  width: 25px
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__textmodal-close-btn span {
+      height:1px;
+      width: 15px
+  }
+}
+
+.lamborghini__textmodal-close-btn span:first-child {
+  transform: rotate(45deg) translate(-50%,-50%)
+}
+
+.lamborghini__textmodal-close-btn span:last-child {
+  transform: rotate(-45deg) translate(-50%,-50%)
+}
+
+.lamborghini__textmodal-close-btn:hover span:first-child,.lamborghini__textmodal-close-btn:hover span:last-child {
+  transform: rotate(0deg) translate(-50%,-50%);
+  transition: all .2s ease-in-out
+}
+
+.lamborghini__textmodal-close-btn-rel {
+  height: 100%;
+  position: relative;
+  width: 100%
+}
+
+.lamborghini__gallery {
+  align-items: center;
+  display: flex;
+  max-height: 90vh;
+  position: relative
+}
+
+.lamborghini__gallery-left {
+  background: #000;
+  height: 65px;
+  left: 0;
+  opacity: .7;
+  position: fixed;
+  top: 40%;
+  transition: all .2s ease-in-out;
+  width: 40px;
+  z-index: 1000;
+  z-index: 90
+}
+
+.lamborghini__gallery-left:hover {
+  opacity: 1
+}
+
+.lamborghini__gallery-left span {
+  background: #fff;
+  height: 2px;
+  left: 10px;
+  position: absolute;
+  top: 30px;
+  transform-origin: 0 0;
+  transition: all .2s ease-in-out;
+  width: 20px;
+  z-index: 90
+}
+
+.lamborghini__gallery-left span:first-child {
+  transform: rotate(45deg) translateY(-50%)
+}
+
+.lamborghini__gallery-left span:last-child {
+  transform: rotate(-45deg) translateY(-50%)
+}
+
+.lamborghini__gallery-right {
+  background: #000;
+  height: 65px;
+  opacity: .7;
+  position: fixed;
+  right: 0;
+  top: 40%;
+  transition: all .2s ease-in-out;
+  width: 40px;
+  z-index: 1000;
+  z-index: 90
+}
+
+.lamborghini__gallery-right:hover {
+  opacity: 1
+}
+
+.lamborghini__gallery-right span {
+  background: #fff;
+  height: 2px;
+  position: absolute;
+  right: -10px;
+  top: 30px;
+  transform-origin: 0 0;
+  transition: all .2s ease-in-out;
+  width: 20px;
+  z-index: 90
+}
+
+.lamborghini__gallery-right span:first-child {
+  transform: rotate(-230deg) translateY(-50%)
+}
+
+.lamborghini__gallery-right span:last-child {
+  transform: rotate(-140deg) translateY(-50%)
+}
+
+.lamborghini__gallery__popup {
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+  width: 100vw;
+  z-index: 9
+}
+
+.lamborghini__gallery__container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: auto auto;
+  margin-left: 200px
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__gallery__container {
+      margin-left:0
+  }
+}
+
+.lamborghini__gallery__card {
+  align-items: center;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  display: flex;
+  height: 240px;
+  justify-content: center;
+  margin: 0 40px 40px;
+  overflow: hidden;
+  position: relative;
+  width: 420px
+}
+
+.lamborghini__gallery__card svg {
+  position: absolute;
+  width: 65px
+}
+
+.lamborghini__gallery__card img,.lamborghini__gallery__card__img {
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: relative;
+  width: 100%
+}
+
+.lamborghini__gallery-overlay {
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+  width: 100vw
+}
+
+.lamborghini__gallery__bg-main-image {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%
+}
+
+.lamborghini__gallery-download-button {
+  bottom: 0;
+  display: flex;
+  height: 30px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  transition: opacity .3s;
+  width: 200px;
+  z-index: 9
+}
+
+.lamborghini__gallery-download-button a {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  justify-content: space-evenly;
+  text-decoration: none;
+  width: 120px
+}
+
+.lamborghini__gallery-download-button-text {
+  font-family: "lamborghini Monospace Regular",sans-serif
+}
+
+@media only screen and (max-width: 1269px) {
+  .lamborghini__gallery-download-button,.lamborghini__gallery-download-button a {
+      height:25px;
+      width: 125px
+  }
+}
+
+.lamborghini__gallery__image:hover .lamborghini__gallery-download-button {
+  opacity: 1;
+  transition: opacity .3s
+}
+
+.lamborghini__gallery-close-btn {
+  height: 35px;
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  width: 35px
+}
+
+.lamborghini__gallery-close-btn span {
+  background: #fff;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform-origin: 0 0;
+  transition: all .2s ease-in-out;
+  width: 35px
+}
+
+.lamborghini__gallery-close-btn span:first-child {
+  transform: rotate(45deg) translate(-50%,-50%)
+}
+
+.lamborghini__gallery-close-btn span:last-child {
+  transform: rotate(-45deg) translate(-50%,-50%)
+}
+
+.lamborghini__gallery-close-btn:hover span:first-child,.lamborghini__gallery-close-btn:hover span:last-child {
+  transform: rotate(0deg) translate(-50%,-50%);
+  transition: all .2s ease-in-out
+}
+
+.lamborghini__gallery-close-btn-rel {
+  height: 100%;
+  position: relative;
+  width: 100%
+}
+
+.lamborghini__gallery__video-wrap {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%
+}
+
+.lamborghini__gallery__video-wrap svg {
+  position: absolute;
+  width: 65px;
+  z-index: 9
+}
+
+.lamborghini__gallery__video-wrap iframe {
+  border: unset;
+  height: 100%;
+  width: 100%
+}
+
+.lamborghini__gallery__play-btn {
+  fill: #fff
+}
+
+@media screen and (max-height: 760px) and (orientation:landscape) {
+  .lamborghini__gallery__card {
+      height:207px;
+      margin: 0 10px 20px;
+      width: 363px
+  }
+}
+
+@media screen and (max-height: 620px) and (orientation:landscape) {
+  .lamborghini__gallery__card {
+      height:114px;
+      width: 200px
+  }
+}
+
+@media screen and (min-aspect-ratio: 1/1) {
+  .lamborghini__gallery__wrap {
+      align-items:center;
+      bottom: 0;
+      display: flex;
+      height: 100vh;
+      left: 0;
+      opacity: 0;
+      overflow: auto;
+      position: fixed;
+      right: 0;
+      top: -5vh;
+      width: 100vw
+  }
+
+  .lamborghini__gallery__wrap::-webkit-scrollbar {
+      display: none
+  }
+
+  .lamborghini__gallery__image {
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      height: 40vw;
+      margin: 0 2vw;
+      min-width: 60vw;
+      opacity: 0;
+      position: relative
+  }
+
+  .lamborghini__gallery__video-wrap video {
+      display: flex;
+      height: 40vw;
+      min-width: 60vw;
+      -o-object-fit: cover;
+      object-fit: cover;
+      opacity: 1;
+      position: absolute;
+      width: 60vw
+  }
+}
+
+@media screen and (min-aspect-ratio: 27/20) {
+  .lamborghini__gallery__wrap {
+      align-items:center;
+      bottom: 0;
+      display: flex;
+      height: 100vh;
+      left: 0;
+      opacity: 0;
+      overflow: auto;
+      position: fixed;
+      right: 0;
+      top: -5vh;
+      width: 100vw
+  }
+
+  .lamborghini__gallery__wrap::-webkit-scrollbar {
+      display: none
+  }
+
+  .lamborghini__gallery__image {
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      height: 30vw;
+      margin: 0 2vw;
+      min-width: 60vw;
+      opacity: 0;
+      position: relative
+  }
+
+  .lamborghini__gallery__video-wrap video {
+      display: flex;
+      height: 30vw;
+      min-width: 60vw;
+      -o-object-fit: cover;
+      object-fit: cover;
+      opacity: 1;
+      position: absolute;
+      width: 60vw
+  }
+}
+
+@media screen and (min-aspect-ratio: 19/9) {
+  .lamborghini__gallery__image {
+      background-position:50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      height: 27vw;
+      margin: 0 2vw;
+      min-width: 60vw;
+      opacity: 0;
+      position: relative
+  }
+
+  .lamborghini__gallery__video-wrap video {
+      display: flex;
+      height: 27vw;
+      min-width: 60vw;
+      -o-object-fit: cover;
+      object-fit: cover;
+      opacity: 1;
+      position: absolute;
+      width: 60vw
+  }
+}
+
+@media screen and (min-aspect-ratio: 8/3) {
+  .lamborghini__gallery__image {
+      background-position:50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      height: 20vw;
+      margin: 0 2vw;
+      min-width: 50vw;
+      opacity: 0;
+      position: relative
+  }
+
+  .lamborghini__gallery__video-wrap video {
+      display: flex;
+      height: 20vw;
+      min-width: 50vw;
+      -o-object-fit: cover;
+      object-fit: cover;
+      opacity: 1;
+      position: absolute;
+      width: 50vw
+  }
+}
+
+@media screen and (max-aspect-ratio: 99/100) {
+  .lamborghini__gallery__wrap {
+      align-items:center;
+      bottom: 0;
+      display: flex;
+      height: 100vh;
+      left: 0;
+      opacity: 0;
+      overflow: auto;
+      position: fixed;
+      right: 0;
+      top: -5vh;
+      width: 100vw
+  }
+
+  .lamborghini__gallery__wrap::-webkit-scrollbar {
+      display: none
+  }
+
+  .lamborghini__gallery__image {
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      height: 45vw;
+      margin: 0 2vw;
+      min-width: 80vw;
+      opacity: 0;
+      position: relative
+  }
+
+  .lamborghini__gallery__video-wrap video {
+      display: flex;
+      height: 45vw;
+      min-width: 80vw;
+      -o-object-fit: cover;
+      object-fit: cover;
+      opacity: 1;
+      position: absolute;
+      width: 80vw
+  }
+}
+
+.lamborghini__gallery .main__image {
+  opacity: 1
+}
+
+.lamborghini__gallery .playBtnInGallery {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 5vw
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__gallery .playBtnInGallery {
+      width:80px
+  }
+}
+
+.st0 {
+  opacity: .8
+}
+
+.st1 {
+  fill: #004bfa
+}
+
+.lamborghini__panel-video {
+  height: 400vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: relative;
+  width: 100%
+}
+
+.lamborghini__panel-video-text,.lamborghini__panel-video-text-wrapper {
+  display: flex;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1130px
+}
+
+.lamborghini__panel-video-text {
+  width: 100%
+}
+
+.lamborghini__panel-video-text-left {
+  bottom: 200px;
+  position: absolute;
+  text-align: left;
+  width: 100%
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__panel-video-text-left {
+      bottom:240px
+  }
+}
+
+.lamborghini__panel-video-text-left h2 {
+  text-align: left
+}
+
+.lamborghini__panel-video-text-left .lamborghini__panel-video-inner {
+  align-items: flex-start;
+  color: #fff;
+  flex-direction: column;
+  height: 100vH;
+  justify-content: flex-end;
+  position: relative;
+  text-align: left;
+  width: 100%
+}
+
+.lamborghini__panel-video-text-right {
+  bottom: 200px;
+  justify-content: flex-end;
+  position: absolute;
+  text-align: right;
+  width: 100%
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__panel-video-text-right {
+      bottom:240px
+  }
+}
+
+.lamborghini__panel-video-text-right h2 {
+  text-align: right;
+  width: 100%
+}
+
+.lamborghini__panel-video-text-right .lamborghini__panel-video-inner {
+  align-items: flex-start;
+  color: #fff;
+  flex-direction: column;
+  height: 100vH;
+  justify-content: flex-end;
+  position: relative;
+  text-align: right;
+  width: 100%
+}
+
+.lamborghini__panel-video-text-top-left {
+  position: absolute;
+  top: 50px;
+  width: 100%
+}
+
+.lamborghini__panel-video-text-top-left h2 {
+  text-align: left
+}
+
+.lamborghini__panel-video-text-top-right {
+  justify-content: flex-end;
+  position: absolute;
+  text-align: right;
+  top: 50px;
+  width: 100%
+}
+
+.lamborghini__panel-video-text-top-right h2 {
+  text-align: right;
+  width: 100%
+}
+
+.lamborghini__panel-video-text h2 {
+  font-size: 32px;
+  line-height: 32px;
+  padding-bottom: 8px
+}
+
+.lamborghini__panel-video-text p {
+  font-size: 16px;
+  line-height: 21px
+}
+
+.lamborghini__panel-video-inner {
+  color: #fff;
+  display: none;
+  max-width: 450px;
+  position: absolute;
+  width: 100%
+}
+
+@media only screen and (max-width: 1269px) {
+  .lamborghini__panel-video-inner {
+      padding:0 24px
+  }
+}
+
+.lamborghini__panel-video-text-top-left .lamborghini__panel-video-inner,.lamborghini__panel-video-text-top-right .lamborghini__panel-video-inner {
+  top: 50px
+}
+
+.lamborghini__video-scroll {
+  height: 100vH;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%
+}
+
+.lamborghini__desktop {
+  display: flex
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__desktop {
+      display:none
+  }
+}
+
+.lamborghini__mobile {
+  display: none
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__mobile {
+      display:flex;
+      height: 100vh
+  }
+}
+
+.lamborghini__layout {
+  position: relative
+}
+
+.lamborghini__panel-engine-video {
+  height: 400vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: relative;
+  width: 100%
+}
+
+.lamborghini__panel-engine-video video {
+  height: 100vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%
+}
+
+.lamborghini__panel-engine-video-text,.lamborghini__panel-engine-video-text-wrapper {
+  display: flex;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1130px
+}
+
+.lamborghini__panel-engine-video-text-center {
+  bottom: 100px;
+  position: absolute;
+  text-align: left;
+  width: 100%
+}
+
+.lamborghini__panel-engine-video-text-center .lamborghini__panel-engine-video-inner {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vH;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  width: 100%
+}
+
+.lamborghini__panel-engine-video-text-left {
+  bottom: 200px;
+  position: absolute;
+  text-align: left;
+  width: 100%
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__panel-engine-video-text-left {
+      bottom:240px
+  }
+}
+
+.lamborghini__panel-engine-video-text-left .lamborghini__panel-engine-video-inner {
+  align-items: flex-start;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vH;
+  justify-content: flex-end;
+  position: relative;
+  text-align: left;
+  width: 100%
+}
+
+.lamborghini__panel-engine-video-text-top-left {
+  position: absolute;
+  top: 50px;
+  width: 100%
+}
+
+.lamborghini__panel-engine-video-text-top-left .lamborghini__panel-engine-video-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100vH;
+  justify-content: flex-start;
+  position: relative;
+  top: 50px;
+  width: 100%
+}
+
+.lamborghini__panel-engine-video-text-right {
+  bottom: 200px;
+  position: absolute;
+  text-align: right;
+  width: 100%
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__panel-engine-video-text-right {
+      bottom:240px
+  }
+}
+
+.lamborghini__panel-engine-video-text-right .lamborghini__panel-engine-video-inner {
+  align-items: flex-end;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vH;
+  justify-content: flex-end;
+  position: relative;
+  text-align: right;
+  width: 100%
+}
+
+.lamborghini__panel-engine-video-text-top-right {
+  position: absolute;
+  text-align: right;
+  top: 50px;
+  width: 100%
+}
+
+.lamborghini__panel-engine-video-text-top-right .lamborghini__panel-engine-video-inner {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  height: 100vH;
+  justify-content: flex-start;
+  position: relative;
+  top: 50px;
+  width: 100%
+}
+
+.lamborghini__panel-engine-video-text h2 {
+  font-size: 32px;
+  line-height: 32px;
+  max-width: 450px;
+  padding-bottom: 8px
+}
+
+.lamborghini__panel-engine-video-text p {
+  font-size: 16px;
+  line-height: 21px;
+  max-width: 450px
+}
+
+.lamborghini__panel-engine-video-inner {
+  color: #fff;
+  position: relative;
+  width: 100%
+}
+
+@media only screen and (max-width: 1269px) {
+  .lamborghini__panel-engine-video-inner {
+      padding:0 24px
+  }
+}
+
+.lamborghini__unintro-iv-component {
+  display: flex;
+  overflow: hidden;
+  position: relative
+}
+
+.lamborghini__unintro-iv-component section {
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0
+}
+
+.lamborghini__unintro-iv-component section:first-child {
+  opacity: 1
+}
+
+.lamborghini__unintro-iv-component .lamborghini__iv-section-description {
+  opacity: 0;
+  visibility: hidden
+}
+
+.lamborghini__unintro-iv-component-overllay {
+  background: #000;
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw
+}
+
+.lamborghini__home-container {
+  overflow: hidden
+}
+
+.lamborghini__iv-section {
+  background-color: #000;
+  color: #fff;
+  font-size: 2em;
+  height: 100vh;
+  line-height: 100vh;
+  min-height: 100vh;
+  position: relative;
+  text-align: center;
+  width: 100vw
+}
+
+.lamborghini__iv-section-panel img,.lamborghini__iv-section-panel video {
+  height: 100vh;
+  min-height: 100vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%
+}
+
+.lamborghini__iv-section-wrapper {
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%
+}
+
+.lamborghini__iv-section-description {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 1001
+}
+
+@media only screen and (max-width: 1269px) {
+  .lamborghini__iv-section-description {
+      padding:0 24px
+  }
+}
+
+.lamborghini__iv-section-description-wrapper {
+  display: flex;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1130px
+}
+
+.lamborghini__iv-section-description .lamborghini__line {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 750px;
+  overflow: hidden;
+  position: relative;
+  width: 100%
+}
+
+@media only screen and (max-width: 1269px) {
+  .lamborghini__iv-section-description .lamborghini__line {
+      width:50%
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__iv-section-description .lamborghini__line {
+      width:70%
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__iv-section-description .lamborghini__line {
+      width:100%
+  }
+}
+
+.lamborghini__iv-section-description .lamborghini__line span {
+  font-size: 3rem;
+  line-height: 3rem
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__iv-section-description .lamborghini__welcome {
+      margin-bottom:10px
+  }
+}
+
+.lamborghini__iv-section-description .lamborghini__welcome span {
+  font-family: "lamborghini Monospace Regular",sans-serif;
+  font-size: 22px;
+  line-height: 22px
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__iv-section-description .lamborghini__welcome span {
+      font-size:18px
+  }
+}
+
+.lamborghini__iv-section-description .lamborghini__quote span {
+  font-family: lamborghini Display Regular,sans-serif;
+  font-size: 65px;
+  line-height: 65px;
+  padding-bottom: 10px
+}
+
+@media only screen and (max-width: 1269px) {
+  .lamborghini__iv-section-description .lamborghini__quote span {
+      font-size:45px;
+      line-height: 45px
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__iv-section-description .lamborghini__quote span {
+      font-size:25px;
+      line-height: 25px
+  }
+}
+
+.lamborghini__iv-section-description .lamborghini__author {
+  margin-bottom: 20px
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__iv-section-description .lamborghini__author {
+      margin-bottom:10px
+  }
+}
+
+.lamborghini__iv-section-description .lamborghini__author span {
+  font-family: "lamborghini Monospace Regular",sans-serif;
+  font-size: 13px;
+  line-height: 13px
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__iv-section-description .lamborghini__author span {
+      font-size:12px
+  }
+}
+
+.lamborghini__iv-section-description .lamborghini__description span {
+  font-family: lamborghini Text Regular,sans-serif;
+  font-size: 24px;
+  line-height: 29px
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__iv-section-description .lamborghini__description span {
+      font-size:20px;
+      line-height: 20px
+  }
+}
+
+.lamborghini__left-bottom {
+  align-items: flex-start;
+  bottom: 200px;
+  justify-content: flex-end;
+  text-align: left
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__left-bottom {
+      bottom:240px
+  }
+}
+
+.lamborghini__left-bottom .lamborghini__quote span {
+  font-size: 32px;
+  line-height: 32px
+}
+
+.lamborghini__left-bottom .lamborghini__description span {
+  font-size: 16px;
+  line-height: 21px
+}
+
+.lamborghini__left-bottom .lamborghini__line {
+  justify-content: flex-start;
+  max-width: 450px
+}
+
+.lamborghini__right-bottom {
+  align-items: flex-end;
+  bottom: 200px;
+  justify-content: flex-end;
+  position: relative;
+  text-align: right
+}
+
+@media only screen and (max-width: 767px) {
+  .lamborghini__right-bottom {
+      bottom:240px
+  }
+}
+
+.lamborghini__right-bottom .lamborghini__quote span {
+  font-size: 32px;
+  line-height: 32px
+}
+
+.lamborghini__right-bottom .lamborghini__description span {
+  font-size: 16px;
+  line-height: 21px
+}
+
+.lamborghini__right-bottom .lamborghini__line {
+  justify-content: flex-end;
+  max-width: 450px
+}
+
+.lamborghini__top-right {
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-top: 50px;
+  position: relative;
+  text-align: right;
+  top: 50px
+}
+
+.lamborghini__top-right .lamborghini__quote span {
+  font-size: 32px;
+  line-height: 32px
+}
+
+.lamborghini__top-right .lamborghini__description span {
+  font-size: 16px;
+  line-height: 21px
+}
+
+.lamborghini__top-right .lamborghini__line {
+  justify-content: flex-end;
+  max-width: 450px
+}
+
+.lamborghini__top-left {
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 50px;
+  position: relative;
+  text-align: left;
+  top: 50px
+}
+
+.lamborghini__top-left .lamborghini__quote span {
+  font-size: 32px;
+  line-height: 32px
+}
+
+.lamborghini__top-left .lamborghini__description span {
+  font-size: 16px;
+  line-height: 21px
+}
+
+.lamborghini__top-left .lamborghini__line {
+  justify-content: flex-start;
+  max-width: 450px
+}
+
+.lamborghini__center-center {
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%,-50%)
+}
+
+@media only screen and (max-width: 1023px) {
+  .lamborghini__center-center .lamborghini__quote span {
+      font-size:32px;
+      line-height: 32px
+  }
+}
+
+.lamborghini__center-center .lamborghini__welcome {
+  margin-bottom: 10px
+}
+
+.lamborghini__center-center .lamborghini__line {
+  justify-content: center
+}
+
+.footer-main {
+  height: 100vh;
+  position: relative;
+  width: 100%
+}
+
+.footer-main-inf {
+  height: 70vh;
+  position: relative;
+  width: 100%
+}
+
+.footer-scroll_wrap {
+  background: #000;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  width: 100vw
+}
+
+.footer-scroll_wrap-inf {
+  background: #000;
+  height:80vh;
+  left: 0;
+  position: relative;
+  top: 0;
+  width: 100vw
+}
+
+.footer-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 60%;
+  text-align: center
+}
+
+@media only screen and (max-width: 1023px) {
+  .footer-wrapper {
+      align-items:flex-start;
+      margin-top: -20px;
+      max-width: 90%;
+      text-align: left
+  }
+}
+
+.footer-description {
+  font-family: "lamborghini Monospace Regular",sans-serif;
+  font-size: 16px;
+  max-width: 735px;
+  padding-bottom: 20px;
+  text-align: justify;
+}
+
+@media only screen and (max-width: 1269px) {
+  .footer-description {
+      font-size:16px
+  }
+}
+
+.footer-copyright {
+  padding-bottom: 40px
+}
+
+@media only screen and (max-width: 1269px) {
+  .footer-copyright {
+      font-size:12px;
+      padding-bottom: 15px
+  }
+}
+
+.footer-menus {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}
+
+@media only screen and (max-width: 1023px) {
+  .footer-menus {
+      align-items:flex-start;
+      flex-direction: row;
+      justify-content: flex-start
+  }
+}
+
+.footer-menu {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 22px;
+  justify-content: space-around;
+  padding-bottom: 40px
+}
+
+@media only screen and (max-width: 1269px) {
+  .footer-menu {
+      padding-bottom:30px
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .footer-menu {
+      justify-content:flex-start;
+      max-width: 55%;
+      text-align: left
+  }
+}
+
+.footer-menu a {
+  color: #fff;
+  font-size: 22px;
+  padding: 0 15px;
+  text-decoration: none
+}
+
+@media only screen and (max-width: 1023px) {
+  .footer-menu a {
+      font-size:18px;
+      line-height: 30px;
+      padding: 0 15px 0 0
+  }
+}
+
+.footer-menu a:hover {
+  color: #004bfa;
+  transition: color .5s ease
+}
+
+.footer-other-menu {
+  max-width: 715px
+}
+
+@media only screen and (max-width: 1023px) {
+  .footer-other-menu {
+      display:flex;
+      flex-direction: column
+  }
+}
+
+.footer-other-menu a {
+  color: #fff;
+  font-family: "lamborghini Monospace Regular",sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+  padding-right: 30px;
+  text-decoration: none
+}
+
+@media only screen and (max-width: 1023px) {
+  .footer-other-menu a {
+      font-size:13px;
+      line-height: 13px;
+      margin-bottom: 10px
+  }
+}
+
+.footer-other-menu a:hover {
+  color: #004bfa;
+  transition: color .5s ease
+}
+
+.footer-social-menu {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 50px;
+  width: 100%
+}
+
+@media only screen and (max-width: 1269px) {
+  .footer-social-menu {
+      justify-content:center;
+      padding-top: 20px;
+      width: 100%
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .footer-social-menu {
+      justify-content:flex-start;
+      margin: unset;
+      padding-top: 0
+  }
+}
+
+.footer-social-menu a {
+  padding-right: 17px
+}
+
+.footer-social-menu svg {
+  height: 20px
+}
+
+.footer-social-menu svg:hover g {
+  fill: #004bfa;
+  transition: color .5s ease
+}
+
+.footer-horizontal .footer-scroll_wrap {
+  left: 0;
+  position: absolute;
+  top: 0;
+  visibility: visible
+}
+
+.lamborghini__comp-button {
+  background-color: #004bfb;
+  border: .0625rem solid #004bfb;
+  color: #fff;
+  font-family: "lamborghini Monospace Regular",serif;
+  height: -moz-max-content;
+  height: max-content;
+  line-height: 1em;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: unset;
+  touch-action: none;
+  transition-duration: .1s,.1s,.1s;
+  transition-property: background,color,border-color,padding;
+  transition-timing-function: ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+.lamborghini__intro-line span .lamborghini__comp-button:hover,.lamborghini__line span .lamborghini__comp-button:hover,.lamborghini__panel-engine-video-inner .lamborghini__comp-button:hover,.lamborghini__panel-video-inner .lamborghini__comp-button:hover {
+  background-color: transparent!important;
+  border: 1px solid #004bfb!important;
+  border-style: solid;
+  border-width: .0625rem;
+  color: #004bfb!important
+}
+
+.modal-open .lamborghini__modal-overlay {
+  opacity: 1!important;
+  visibility: visible!important
+}
+
+.modal-open .lamborghini__nav-bar,.modal-open .lamborghini__section_nav,.modal-open .lamborghini__settings-bar {
+  display: none!important;
+  opacity: 0!important;
+  visibility: hidden!important
+}
+
+.lamborghini__modal-overlay {
+  background: #000!important
+}
+
+.lamborghini__horizontal-background-desktop,.lamborghini__panel-asset-desktop,.lamborghini__panel-video-desktop,.lamborghini__video-desktop {
+  display: flex
+}
+
+@media only screen and (max-width: 650px) {
+  .lamborghini__horizontal-background-desktop,.lamborghini__panel-asset-desktop,.lamborghini__panel-video-desktop,.lamborghini__video-desktop {
+      display:none
+  }
+}
+
+.lamborghini__horizontal-background-mobile,.lamborghini__panel-asset-mobile,.lamborghini__panel-video-mobile,.lamborghini__video-mobile {
+  display: none
+}
+
+@media only screen and (max-width: 650px) {
+  .lamborghini__horizontal-background-mobile,.lamborghini__panel-asset-mobile,.lamborghini__panel-video-mobile,.lamborghini__video-mobile {
+      display:flex
+  }
+}
+
+.lozad {
+  filter: blur(2rem);
+  transition: all .2s ease-out
+}
+
+.lozad.loaded {
+  filter: blur(0)
+}
+
+.lamborghini__panel-video-text-top-left .lamborghini__panel-video-inner {
+  align-items: flex-start
+}
+
+@media only screen and (max-width: 650px) {
+  .lamborghini__media-text-component__media--mobile {
+      max-height:400px;
+      overflow: hidden
+  }
+}
+
+.lamborghini__mobile {
+  height: 100vH;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%
+}
+
+.lamborghini__subnav-item .number,.lamborghini__subnav-item .text {
+  padding: 0 2px
+}
+
+.lamborghini__hero-component-body h2,.lamborghini__hero-component-title h1,.lamborghini__intro-quote h1,.lamborghini__intro-quote h2,.lamborghini__quote h1,.lamborghini__quote h2 {
+  font-size: inherit
+}
+
+.popup-item {
+  width: 100%
+}
+
+.vbox-overlay {
+  --vbox-tools-color: #fff;
+  --vbox-title-background: #101010;
+  --vbox-title-width: "auto";
+  --vbox-title-radius: 0;
+  --vbox-share-background: #101010;
+  --vbox-share-width: "auto";
+  --vbox-share-radius: 0;
+  --vbox-padding: 0
+}
+
+.vbox-overlay *,.vbox-overlay :after,.vbox-overlay :before {
+  /* -webkit-backface-visibility: hidden; */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+.vbox-overlay * {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible
+}
+
+.vbox-overlay {
+  -webkit-align-items: center;
+  align-items: center;
+  bottom: 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999999
+}
+
+.vbox-share,.vbox-title {
+  color: var(--vbox-tools-color);
+  line-height: 1;
+  margin: 0 auto;
+  position: fixed;
+  text-align: center;
+  z-index: 98
+}
+
+.vbox-title {
+  background-color: var(--vbox-title-background);
+  border-radius: var(--vbox-title-radius);
+  display: block;
+  font-size: 12px;
+  overflow: hidden;
+  padding: 12px 54px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: var(--vbox-title-width)
+}
+
+.vbox-share {
+  background-color: var(--vbox-share-background);
+  border-radius: var(--vbox-share-radius);
+  font-size: 24px;
+  padding: 0 .35em;
+  width: var(--vbox-share-width)
+}
+
+.vbox-link-btn,button.vbox-link-btn,button.vbox-link-btn:active,button.vbox-link-btn:focus,button.vbox-link-btn:hover {
+  background: 0 0!important;
+  border: none!important;
+  box-shadow: none!important;
+  color: inherit!important;
+  cursor: pointer;
+  display: inline-block;
+  outline: 0;
+  padding: 6px 12px
+}
+
+.vbox-share a {
+  color: inherit!important;
+  display: inline-block;
+  font-size: 16px;
+  padding: 6px 12px
+}
+
+.vbox-share svg {
+  vertical-align: middle;
+  z-index: 10
+}
+
+.vbox-close {
+  align-items: center;
+  border: 0;
+  color: #000;
+  color: var(--vbox-tools-color);
+  cursor: pointer;
+  display: flex;
+  font-size: 24px;
+  opacity: .8;
+  padding: 6px 15px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: opacity .2s;
+  z-index: 99
+}
+
+.vbox-close:hover {
+  opacity: 1
+}
+
+.vbox-left-corner {
+  align-items: center;
+  color: var(--vbox-tools-color);
+  cursor: pointer;
+  display: flex;
+  font-size: 12px;
+  left: 0;
+  line-height: 1;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 99
+}
+
+.vbox-num {
+  display: inline-block;
+  padding: 12px 15px
+}
+
+.vbox-left {
+  left: 0
+}
+
+.vbox-right {
+  right: 0
+}
+
+.vbox-top {
+  top: 0
+}
+
+.vbox-bottom {
+  bottom: 0
+}
+
+.vbox-next,.vbox-prev {
+  cursor: pointer;
+  display: block;
+  height: 45px;
+  margin-top: -15px;
+  opacity: .8;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  transition: opacity .2s;
+  width: 45px;
+  z-index: 99
+}
+
+.vbox-next:hover,.vbox-prev:hover {
+  opacity: 1
+}
+
+.vbox-next span,.vbox-prev span {
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-right-color: var(--vbox-tools-color);
+  border-top: 2px solid transparent;
+  border-top-color: var(--vbox-tools-color);
+  display: block;
+  height: 20px;
+  position: relative;
+  position: absolute;
+  text-indent: -100px;
+  top: 8px;
+  width: 20px
+}
+
+.vbox-prev {
+  left: 15px
+}
+
+.vbox-next {
+  right: 15px
+}
+
+.vbox-prev span {
+  left: 10px;
+  -ms-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg)
+}
+
+.vbox-next span {
+  right: 10px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg)
+}
+
+.vbox-inline,.venoratio {
+  margin: 0 auto;
+  position: relative;
+  width: 100%
+}
+
+.venoratio:before {
+  content: "";
+  display: block;
+  padding-top: var(--vb-aspect-ratio)
+}
+
+.venoratio>* {
+  height: 100%;
+  left: 0;
+  padding: var(--vbox-padding);
+  position: absolute;
+  top: 0;
+  width: 100%
+}
+
+.venoratio-1x1 {
+  --vb-aspect-ratio: 100%
+}
+
+.venoratio-4x3 {
+  --vb-aspect-ratio: 75%
+}
+
+.venoratio-16x9 {
+  --vb-aspect-ratio: 56.25%
+}
+
+.venoratio-21x9 {
+  --vb-aspect-ratio: 42.85714%
+}
+
+.venoratio-full {
+  --vb-aspect-ratio: calc(100vh - 100px)
+}
+
+.vbox-child.vbox-inline,.vbox-child.venoratio {
+  max-width: 100%
+}
+
+.vbox-open {
+  overflow: hidden
+}
+
+.vbox-container {
+  /* overflow-scrolling: touch; */
+  -webkit-overflow-scrolling: touch;
+  bottom: 0;
+  left: 0;
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 20
+}
+
+.vbox-content {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+  opacity: 0;
+  overflow: hidden;
+  padding: 20px 4%;
+  position: relative;
+  text-align: center;
+  width: 100%
+}
+
+.vbox-container img {
+  height: auto;
+  max-width: 100%
+}
+
+.vbox-child {
+  max-height: 90vh;
+  max-width: 100%;
+  overflow: hidden;
+  padding: var(--vbox-padding);
+  text-align: initial
+}
+
+.vbox-child img {
+  display: block;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none
+}
+
+.vbox-grab .vbox-child img {
+  cursor: grab
+}
+
+.vbox-child>iframe {
+  border: none!important
+}
+
+.vbox-content.swipe-left {
+  margin-left: -200px!important
+}
+
+.vbox-content.swipe-right {
+  margin-left: 200px!important
+}
+
+.vbox-preloader {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0)
+}
+
+.vbox-preloader .vbox-preloader-inner {
+  opacity: 1;
+  transition: opacity .2s
+}
+
+.vbox-hidden {
+  display: none
+}
+
+.vbox-preloader.vbox-hidden .vbox-preloader-inner {
+  opacity: 0
+}
+
+.vbox-backdrop {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateZ(-1px);
+  -moz-transform: translateZ(-1px);
+  -o-transform: translateZ(-1px);
+  transform: translateZ(-1px);
+  width: 100%;
+  z-index: 0
+}
+
+.vbox-tooltip {
+  display: inline-block;
+  position: relative
+}
+
+.vbox-tooltip .vbox-tooltip-text {
+  bottom: 100%;
+  color: #fff;
+  font-family: sans-serif;
+  left: 0;
+  margin-bottom: 2px;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  transition: opacity .3s;
+  visibility: hidden;
+  z-index: 1
+}
+
+.vbox-top .vbox-tooltip .vbox-tooltip-text {
+  bottom: auto;
+  margin-bottom: 0;
+  margin-top: 2px;
+  top: 100%
+}
+
+.vbox-tooltip-inner {
+  background-color: rgba(0,0,0,.9);
+  border-radius: 6px;
+  font-size: 10px;
+  padding: 5px 10px
+}
+
+.vbox-tooltip:hover .vbox-tooltip-text {
+  opacity: 1;
+  visibility: visible
+}
+
+.vbox-overlay {
+  --sk-size: 40px;
+  --sk-color: #333
+}
+
+.sk-center {
+  margin: auto
+}
+
+.sk-plane {
+  animation: sk-plane 1.2s ease-in-out infinite;
+  background-color: var(--sk-color);
+  height: var(--sk-size);
+  width: var(--sk-size)
+}
+
+@keyframes sk-plane {
+  0% {
+      transform: perspective(120px) rotateX(0) rotateY(0)
+  }
+
+  50% {
+      transform: perspective(120px) rotateX(-180.1deg) rotateY(0)
+  }
+
+  to {
+      transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
+  }
+}
+
+.sk-chase {
+  animation: sk-chase 2.5s linear infinite both;
+  height: var(--sk-size);
+  position: relative;
+  width: var(--sk-size)
+}
+
+.sk-chase-dot {
+  animation: sk-chase-dot 2s ease-in-out infinite both;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%
+}
+
+.sk-chase-dot:before {
+  animation: sk-chase-dot-before 2s ease-in-out infinite both;
+  background-color: var(--sk-color);
+  border-radius: 100%;
+  content: "";
+  display: block;
+  height: 25%;
+  width: 25%
+}
+
+.sk-chase-dot:first-child {
+  animation-delay: -1.1s
+}
+
+.sk-chase-dot:nth-child(2) {
+  animation-delay: -1s
+}
+
+.sk-chase-dot:nth-child(3) {
+  animation-delay: -.9s
+}
+
+.sk-chase-dot:nth-child(4) {
+  animation-delay: -.8s
+}
+
+.sk-chase-dot:nth-child(5) {
+  animation-delay: -.7s
+}
+
+.sk-chase-dot:nth-child(6) {
+  animation-delay: -.6s
+}
+
+.sk-chase-dot:first-child:before {
+  animation-delay: -1.1s
+}
+
+.sk-chase-dot:nth-child(2):before {
+  animation-delay: -1s
+}
+
+.sk-chase-dot:nth-child(3):before {
+  animation-delay: -.9s
+}
+
+.sk-chase-dot:nth-child(4):before {
+  animation-delay: -.8s
+}
+
+.sk-chase-dot:nth-child(5):before {
+  animation-delay: -.7s
+}
+
+.sk-chase-dot:nth-child(6):before {
+  animation-delay: -.6s
+}
+
+@keyframes sk-chase {
+  to {
+      transform: rotate(1turn)
+  }
+}
+
+@keyframes sk-chase-dot {
+  80%,to {
+      transform: rotate(1turn)
+  }
+}
+
+@keyframes sk-chase-dot-before {
+  50% {
+      transform: scale(.4)
+  }
+
+  0%,to {
+      transform: scale(1)
+  }
+}
+
+.sk-bounce {
+  height: var(--sk-size);
+  position: relative;
+  width: var(--sk-size)
+}
+
+.sk-bounce-dot {
+  animation: sk-bounce 2s cubic-bezier(.455,.03,.515,.955) infinite;
+  background-color: var(--sk-color);
+  border-radius: 50%;
+  height: 100%;
+  left: 0;
+  opacity: .6;
+  position: absolute;
+  top: 0;
+  width: 100%
+}
+
+.sk-bounce-dot:nth-child(2) {
+  animation-delay: -1s
+}
+
+@keyframes sk-bounce {
+  0%,to {
+      transform: scale(0)
+  }
+
+  45%,55% {
+      transform: scale(1)
+  }
+}
+
+.sk-wave {
+  display: flex;
+  height: var(--sk-size);
+  justify-content: space-between;
+  width: var(--sk-size)
+}
+
+.sk-wave-rect {
+  animation: sk-wave 1.2s ease-in-out infinite;
+  background-color: var(--sk-color);
+  height: 100%;
+  width: 15%
+}
+
+.sk-wave-rect:first-child {
+  animation-delay: -1.2s
+}
+
+.sk-wave-rect:nth-child(2) {
+  animation-delay: -1.1s
+}
+
+.sk-wave-rect:nth-child(3) {
+  animation-delay: -1s
+}
+
+.sk-wave-rect:nth-child(4) {
+  animation-delay: -.9s
+}
+
+.sk-wave-rect:nth-child(5) {
+  animation-delay: -.8s
+}
+
+@keyframes sk-wave {
+  0%,40%,to {
+      transform: scaleY(.4)
+  }
+
+  20% {
+      transform: scaleY(1)
+  }
+}
+
+.sk-pulse {
+  animation: sk-pulse 1.2s cubic-bezier(.455,.03,.515,.955) infinite;
+  background-color: var(--sk-color);
+  border-radius: 100%;
+  height: var(--sk-size);
+  width: var(--sk-size)
+}
+
+@keyframes sk-pulse {
+  0% {
+      transform: scale(0)
+  }
+
+  to {
+      opacity: 0;
+      transform: scale(1)
+  }
+}
+
+.sk-flow {
+  display: flex;
+  height: calc(var(--sk-size)*1.3);
+  justify-content: space-between;
+  width: calc(var(--sk-size)*1.3)
+}
+
+.sk-flow-dot {
+  animation: sk-flow 1.4s cubic-bezier(.455,.03,.515,.955) 0s infinite both;
+  background-color: var(--sk-color);
+  border-radius: 50%;
+  height: 25%;
+  width: 25%
+}
+
+.sk-flow-dot:first-child {
+  animation-delay: -.3s
+}
+
+.sk-flow-dot:nth-child(2) {
+  animation-delay: -.15s
+}
+
+@keyframes sk-flow {
+  0%,80%,to {
+      transform: scale(.3)
+  }
+
+  40% {
+      transform: scale(1)
+  }
+}
+
+.sk-swing {
+  animation: sk-swing 1.8s linear infinite;
+  height: var(--sk-size);
+  position: relative;
+  width: var(--sk-size)
+}
+
+.sk-swing-dot {
+  animation: sk-swing-dot 2s ease-in-out infinite;
+  background-color: var(--sk-color);
+  border-radius: 100%;
+  height: 45%;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 45%
+}
+
+.sk-swing-dot:nth-child(2) {
+  animation-delay: -1s;
+  bottom: 0;
+  top: auto
+}
+
+@keyframes sk-swing {
+  to {
+      transform: rotate(1turn)
+  }
+}
+
+@keyframes sk-swing-dot {
+  0%,to {
+      transform: scale(.2)
+  }
+
+  50% {
+      transform: scale(1)
+  }
+}
+
+.sk-circle {
+  height: var(--sk-size);
+  position: relative;
+  width: var(--sk-size)
+}
+
+.sk-circle-dot {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%
+}
+
+.sk-circle-dot:before {
+  animation: sk-circle 1.2s ease-in-out infinite both;
+  background-color: var(--sk-color);
+  border-radius: 100%;
+  content: "";
+  display: block;
+  height: 15%;
+  width: 15%
+}
+
+.sk-circle-dot:first-child {
+  transform: rotate(30deg)
+}
+
+.sk-circle-dot:nth-child(2) {
+  transform: rotate(60deg)
+}
+
+.sk-circle-dot:nth-child(3) {
+  transform: rotate(90deg)
+}
+
+.sk-circle-dot:nth-child(4) {
+  transform: rotate(120deg)
+}
+
+.sk-circle-dot:nth-child(5) {
+  transform: rotate(150deg)
+}
+
+.sk-circle-dot:nth-child(6) {
+  transform: rotate(180deg)
+}
+
+.sk-circle-dot:nth-child(7) {
+  transform: rotate(210deg)
+}
+
+.sk-circle-dot:nth-child(8) {
+  transform: rotate(240deg)
+}
+
+.sk-circle-dot:nth-child(9) {
+  transform: rotate(270deg)
+}
+
+.sk-circle-dot:nth-child(10) {
+  transform: rotate(300deg)
+}
+
+.sk-circle-dot:nth-child(11) {
+  transform: rotate(330deg)
+}
+
+.sk-circle-dot:first-child:before {
+  animation-delay: -1.1s
+}
+
+.sk-circle-dot:nth-child(2):before {
+  animation-delay: -1s
+}
+
+.sk-circle-dot:nth-child(3):before {
+  animation-delay: -.9s
+}
+
+.sk-circle-dot:nth-child(4):before {
+  animation-delay: -.8s
+}
+
+.sk-circle-dot:nth-child(5):before {
+  animation-delay: -.7s
+}
+
+.sk-circle-dot:nth-child(6):before {
+  animation-delay: -.6s
+}
+
+.sk-circle-dot:nth-child(7):before {
+  animation-delay: -.5s
+}
+
+.sk-circle-dot:nth-child(8):before {
+  animation-delay: -.4s
+}
+
+.sk-circle-dot:nth-child(9):before {
+  animation-delay: -.3s
+}
+
+.sk-circle-dot:nth-child(10):before {
+  animation-delay: -.2s
+}
+
+.sk-circle-dot:nth-child(11):before {
+  animation-delay: -.1s
+}
+
+@keyframes sk-circle {
+  0%,80%,to {
+      transform: scale(0)
+  }
+
+  40% {
+      transform: scale(1)
+  }
+}
+
+.sk-circle-fade {
+  height: var(--sk-size);
+  position: relative;
+  width: var(--sk-size)
+}
+
+.sk-circle-fade-dot {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%
+}
+
+.sk-circle-fade-dot:before {
+  animation: sk-circle-fade 1.2s ease-in-out infinite both;
+  background-color: var(--sk-color);
+  border-radius: 100%;
+  content: "";
+  display: block;
+  height: 15%;
+  width: 15%
+}
+
+.sk-circle-fade-dot:first-child {
+  transform: rotate(30deg)
+}
+
+.sk-circle-fade-dot:nth-child(2) {
+  transform: rotate(60deg)
+}
+
+.sk-circle-fade-dot:nth-child(3) {
+  transform: rotate(90deg)
+}
+
+.sk-circle-fade-dot:nth-child(4) {
+  transform: rotate(120deg)
+}
+
+.sk-circle-fade-dot:nth-child(5) {
+  transform: rotate(150deg)
+}
+
+.sk-circle-fade-dot:nth-child(6) {
+  transform: rotate(180deg)
+}
+
+.sk-circle-fade-dot:nth-child(7) {
+  transform: rotate(210deg)
+}
+
+.sk-circle-fade-dot:nth-child(8) {
+  transform: rotate(240deg)
+}
+
+.sk-circle-fade-dot:nth-child(9) {
+  transform: rotate(270deg)
+}
+
+.sk-circle-fade-dot:nth-child(10) {
+  transform: rotate(300deg)
+}
+
+.sk-circle-fade-dot:nth-child(11) {
+  transform: rotate(330deg)
+}
+
+.sk-circle-fade-dot:first-child:before {
+  animation-delay: -1.1s
+}
+
+.sk-circle-fade-dot:nth-child(2):before {
+  animation-delay: -1s
+}
+
+.sk-circle-fade-dot:nth-child(3):before {
+  animation-delay: -.9s
+}
+
+.sk-circle-fade-dot:nth-child(4):before {
+  animation-delay: -.8s
+}
+
+.sk-circle-fade-dot:nth-child(5):before {
+  animation-delay: -.7s
+}
+
+.sk-circle-fade-dot:nth-child(6):before {
+  animation-delay: -.6s
+}
+
+.sk-circle-fade-dot:nth-child(7):before {
+  animation-delay: -.5s
+}
+
+.sk-circle-fade-dot:nth-child(8):before {
+  animation-delay: -.4s
+}
+
+.sk-circle-fade-dot:nth-child(9):before {
+  animation-delay: -.3s
+}
+
+.sk-circle-fade-dot:nth-child(10):before {
+  animation-delay: -.2s
+}
+
+.sk-circle-fade-dot:nth-child(11):before {
+  animation-delay: -.1s
+}
+
+@keyframes sk-circle-fade {
+  0%,39%,to {
+      opacity: 0;
+      transform: scale(.6)
+  }
+
+  40% {
+      opacity: 1;
+      transform: scale(1)
+  }
+}
+
+.sk-grid {
+  height: var(--sk-size);
+  width: var(--sk-size)
+}
+
+.sk-grid-cube {
+  animation: sk-grid 1.3s ease-in-out infinite;
+  background-color: var(--sk-color);
+  float: left;
+  height: 33.33%;
+  width: 33.33%
+}
+
+.sk-grid-cube:first-child {
+  animation-delay: .2s
+}
+
+.sk-grid-cube:nth-child(2) {
+  animation-delay: .3s
+}
+
+.sk-grid-cube:nth-child(3) {
+  animation-delay: .4s
+}
+
+.sk-grid-cube:nth-child(4) {
+  animation-delay: .1s
+}
+
+.sk-grid-cube:nth-child(5) {
+  animation-delay: .2s
+}
+
+.sk-grid-cube:nth-child(6) {
+  animation-delay: .3s
+}
+
+.sk-grid-cube:nth-child(7) {
+  animation-delay: 0s
+}
+
+.sk-grid-cube:nth-child(8) {
+  animation-delay: .1s
+}
+
+.sk-grid-cube:nth-child(9) {
+  animation-delay: .2s
+}
+
+@keyframes sk-grid {
+  0%,70%,to {
+      transform: scaleX(1)
+  }
+
+  35% {
+      transform: scale3D(0,0,1)
+  }
+}
+
+.sk-fold {
+  height: var(--sk-size);
+  position: relative;
+  transform: rotate(45deg);
+  width: var(--sk-size)
+}
+
+.sk-fold-cube {
+  float: left;
+  height: 50%;
+  position: relative;
+  transform: scale(1.1);
+  width: 50%
+}
+
+.sk-fold-cube:before {
+  animation: sk-fold 2.4s linear infinite both;
+  background-color: var(--sk-color);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform-origin: 100% 100%;
+  width: 100%
+}
+
+.sk-fold-cube:nth-child(2) {
+  transform: scale(1.1) rotate(90deg)
+}
+
+.sk-fold-cube:nth-child(4) {
+  transform: scale(1.1) rotate(180deg)
+}
+
+.sk-fold-cube:nth-child(3) {
+  transform: scale(1.1) rotate(270deg)
+}
+
+.sk-fold-cube:nth-child(2):before {
+  animation-delay: .3s
+}
+
+.sk-fold-cube:nth-child(4):before {
+  animation-delay: .6s
+}
+
+.sk-fold-cube:nth-child(3):before {
+  animation-delay: .9s
+}
+
+@keyframes sk-fold {
+  0%,10% {
+      opacity: 0;
+      transform: perspective(140px) rotateX(-180deg)
+  }
+
+  25%,75% {
+      opacity: 1;
+      transform: perspective(140px) rotateX(0)
+  }
+
+  90%,to {
+      opacity: 0;
+      transform: perspective(140px) rotateY(180deg)
+  }
+}
+
+.sk-wander {
+  height: var(--sk-size);
+  position: relative;
+  width: var(--sk-size)
+}
+
+.sk-wander-cube {
+  --sk-wander-distance: calc(var(--sk-size)*0.75);
+  animation: sk-wander 2s ease-in-out -2s infinite both;
+  background-color: var(--sk-color);
+  height: 20%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 20%
+}
+
+.sk-wander-cube:nth-child(2) {
+  animation-delay: -.5s
+}
+
+.sk-wander-cube:nth-child(3) {
+  animation-delay: -1s
+}
+
+@keyframes sk-wander {
+  0% {
+      transform: rotate(0)
+  }
+
+  25% {
+      transform: translateX(var(--sk-wander-distance)) rotate(-90deg) scale(.6)
+  }
+
+  50% {
+      transform: translateX(var(--sk-wander-distance)) translateY(var(--sk-wander-distance)) rotate(-179deg)
+  }
+
+  50.1% {
+      transform: translateX(var(--sk-wander-distance)) translateY(var(--sk-wander-distance)) rotate(-180deg)
+  }
+
+  75% {
+      transform: translateX(0) translateY(var(--sk-wander-distance)) rotate(-270deg) scale(.6)
+  }
+
+  to {
+      transform: rotate(-1turn)
+  }
+}
+
+.venobox-download-text {
+  display: inline-block;
+  font-family: "lamborghini Monospace Regular",sans-serif;
+  font-size: 16px;
+  padding: 0 5px
+}
+
+.cursor {
+  background: url(../images/trochuot.jpg)
+}
+
+.cursor.active {
+  background-image: url(../images/trochuot.jpg);
+  transform: scale(1.4) translate(-.25rem,-.25rem)
+}
+
+.hero-banner
+{
+    padding-top: 9rem !important;
+}
+
+#hero-banner
+{
+    padding-top: 6rem;
+}
+
+@media (min-width: 1599.98px){
+#hero-banner > div > div.px-0.model-info-wrapper.col-lg-7.col-md-8.col-sm-10.col-12.offset-sm-1
+{
+    bottom : 150px !important;
+}
+#hero-banner > div > a > div
+{
+    bottom : 140px !important;
+}
+}
+
+#hero-banner > div > div.px-0.model-info-wrapper.col-lg-7.col-md-8.col-sm-10.col-12.offset-sm-1
+{
+    bottom : 135px;
+}
+#hero-banner > div > a > div
+{
+    bottom : 130px;
+}
+
+#hero-banner .swiper-container .swiper-wrapper > div > div.slide-overlay.mx-0.row > div > div
+{
+    padding-bottom: 26%;
+}
+
+@media (max-width: 1024.98px){
+#banner-slim > div > div.d-flex
+{
+    min-height: 52rem;
+}
+#banner-slim > div > div > div > div.link
+{
+    top: 28%;
+}
+#banner-slim > div > div > span > img
+{
+    object-fit: contain;
+    object-position: bottom;
+}
+}
+@media (max-width: 766.98px){
+#banner-slim > div > div.d-flex
+{
+    min-height: 46rem;
+}
+#banner-slim > div > div > div > div.link
+{
+    top: 35%;
+}
+}
+@media (max-width: 499.98px){
+#banner-slim > div > div.d-flex
+{
+    min-height: 40rem;
+}
+}
+
+.header-center{
+  text-align: center;
+  font-size: 24px;
+}
+
+.model-3d{
+  width: auto;
+  height: 390px;
+  align-items: center !important;
+}
+
+.ar-button{
+  position: absolute;
+  background: none;
+  padding: 4px 8px 12px 8px;
+  /* border: none; */
+  border: 1px solid salmon;
+  border-radius: 16px;
+  bottom: 12px;
+  right: 24px;
+}
+
+.ar-button img {
+  height: 30px;
+  margin-bottom: -10px;
+}
+
+.tech-specification{
+  margin: 15px;
+}
+
+.css-znwgwb{
+  text-align:left;
+  margin-bottom:12rem;
+  margin-top:12rem;
+}
+
+@media (max-width: 1365.98px){
+  .css-znwgwb{margin-top: 60px;}
+}
+
+.css-znwgwb.content-wrapper{padding:20px;}
+
+@media (max-width: 1365.98px){
+  .css-znwgwb{margin-bottom: 0rem;}
+}
+
+.css-znwgwb .tech-section-title{line-height:1.21;letter-spacing:0.056rem;font-size:26px;}
+.css-znwgwb .tech-data{list-style:none;padding:0;margin-top:0.8rem;margin-bottom:3rem;}
+.css-znwgwb .tech-data>li{padding:1.8rem 0 1.5rem;border-bottom:1px solid rgba(24, 24, 24, 0.2);}
+.css-znwgwb .tech-data .label{font-size:16px;font-weight:400;line-height:1.5;letter-spacing:0.12rem;margin-bottom:0.4rem;display:block;text-transform:uppercase;}
+.css-znwgwb .tech-data .data,.css-znwgwb .tech-data .data p{font-size:16px;font-weight:300;font-stretch:normal;font-style:normal;line-height:1.5;letter-spacing:0.02rem;display:block;}
+.css-znwgwb .tech-data .data p{margin:20px; text-align: justify;}
+.css-znwgwb .button-expand{margin:30px 0 0 0;}
+.css-znwgwb .button-expand .icon-button{text-align:left;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:#ffffff;}
+.css-znwgwb .button-expand .icon-button svg{width:5rem;height:5rem;margin-right:2.5rem;}.css-znwgwb .with-icon svg{width:5rem;height:5rem;min-width:5rem;min-height:5rem;}
+#default-modal-mobile .css-znwgwb.content-wrapper{padding-top:2.8rem;padding-bottom:2.8rem;}
+
+@media (min-width: 1025px){
+  .css-znwgwb .tech-section-title{line-height:1;letter-spacing:0.064rem;font-size:3.2rem;font-weight:bold;text-align:center;}
+  .css-znwgwb .tech-section{break-inside:avoid;page-break-inside:avoid;-webkit-column-break-inside:avoid;}
+  .css-znwgwb .tech-data{margin-top:0.4rem;margin-bottom:4rem;}
+  .css-znwgwb .tech-data>li{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:baseline;-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline;padding:2.8rem 0 1.5rem;}
+  .css-znwgwb .tech-data .label{font-size:1.6rem;line-height:1.36;margin-bottom:0;}
+  .css-znwgwb .tech-data .data,.css-znwgwb .tech-data .data p{font-size:1.6rem;line-height:1.33;text-align:right;}
+  .css-znwgwb .tech-data .data p{margin:20px; text-align: justify;}
+  .css-znwgwb .button-expand{margin:0;}
+  .css-znwgwb .button-expand .primary{font-size:1.6rem;letter-spacing:0.032rem;font-weight:300;line-height:1.44;}
+  .css-znwgwb .spec-details{margin-top:3rem;background-color:#f8f8f7;}
+  .css-znwgwb .spec-details>div{padding:4rem 0 6rem;}
+  .css-znwgwb .spec-details .column-wrapper{-webkit-columns:2;columns:2;-webkit-column-gap:9vw;column-gap:9vw;margin-top:4rem;}
+  .css-znwgwb .spec-details .tech-section-title{text-align:left;}
+  .css-znwgwb .spec-details .tech-data{margin:3.6rem 0 4rem;}
+  .css-znwgwb .spec-details .tech-data>li{padding:1.6rem 0;}
+  .css-znwgwb .spec-details .tech-data .label,.css-znwgwb .spec-details .tech-data .data,.css-znwgwb .spec-details .tech-data .data p{font-size:1.6rem;font-weight:300;line-height:1.75;letter-spacing:0.032rem;}
+  .css-znwgwb .spec-details .tech-data .data p{margin:0;}
+}
+  
+@media (min-width: 1366px){
+  .css-znwgwb .tech-data>li{padding:3.2rem 0 1.8rem;}
+  .css-znwgwb .tech-data .label{font-size:1.6rem;}
+  .css-znwgwb .tech-data .data,.css-znwgwb .tech-data .data p{font-size:1.6rem; text-align: justify;}
+  .css-znwgwb .spec-details>div{padding:6rem 0 8rem;}
+  .css-znwgwb .spec-details .column-wrapper{-webkit-column-gap:12rem;column-gap:12rem;margin-top:5rem;}
+}
+
+@media (min-width: 1600px){
+  .css-znwgwb .tech-data .data,.css-znwgwb .tech-data .data p{
+    font-size:1.6rem;
+    text-align: justify;
+  }
+}
+
+.title-h2{
+  margin: 0px 20px;
+}
+
+.dimension-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: rgb(58, 6, 155);
+  background-color: rgba(108, 212, 11, 0.5);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.hotspot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(11, 14, 233);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.annotation{
+  background-color: #888888;
+  position: absolute;
+  transform: translate(10px, 10px);
+  border-radius: 10px;
+  padding: 10px;
+}
+/* This keeps child nodes hidden while the element loads */
+:not(:defined) > * {
+  display: none;
+}
+
+/* #controls {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  max-width: unset;
+  transform: unset;
+  pointer-events: auto;
+  z-index: 100;
+}
+
+.dot {
+  display: none;
+}
+
+.dim {
+  background: #fff;
+  border-radius: 4px;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  color: rgba(0, 0, 0, 0.8);
+  display: block;
+  font-family: Futura, Helvetica Neue, sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  max-width: 128px;
+  overflow-wrap: break-word;
+  padding: 0.5em 1em;
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  transform: translate3d(-50%, -50%, 0);
+  pointer-events: none;
+  --min-hotspot-opacity: 0;
+}
+
+.dimensionLineContainer {
+  pointer-events: none;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.dimensionLine {
+  stroke: #16a5e6;
+  stroke-width: 2;
+  stroke-dasharray: 2;
+}
+
+.hide {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .dim {
+      font-size: 3vw;
+  }
+} */

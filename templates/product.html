@@ -1,0 +1,190 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div id="info"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
+<script>
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.getElementById('model3D').appendChild(renderer.domElement);
+
+    const loader = new THREE.GLTFLoader();
+    loader.load('../static/models/{{data[4]}}', function (gltf) {
+        const model = gltf.scene;
+        scene.add(model);
+
+        // Tạo checkpoint
+        const checkpoint1 = new THREE.Mesh(
+            new THREE.SphereGeometry(0.2, 32, 32),
+            new THREE.MeshBasicMaterial({ color: 0xff0000 })
+        );
+        checkpoint1.position.set(10, 14, 13); // Đặt vị trí của checkpoint
+        scene.add(checkpoint1);
+        checkpoint1.userData = { info: "Thông tin cho checkpoint 1" }; // Thêm thông tin cho checkpoint
+
+        const checkpoint2 = new THREE.Mesh(
+            new THREE.SphereGeometry(0.2, 32, 32),
+            new THREE.MeshBasicMaterial({ color: 0x00ff00 })
+        );
+        checkpoint2.position.set(2, 5, 4); // Đặt vị trí của checkpoint
+        scene.add(checkpoint2);
+        checkpoint2.userData = { info: "Thông tin cho checkpoint 2" }; // Thêm thông tin cho checkpoint
+
+        // Xác định sự kiện khi người dùng click vào checkpoint
+        window.addEventListener('click', function (event) {
+            const raycaster = new THREE.Raycaster();
+            const mouse = new THREE.Vector2();
+            mouse.x = (event.clientX / renderer.domElement.clientWidth) * 2 - 1;
+            mouse.y = -(event.clientY / renderer.domElement.clientHeight) * 2 + 1;
+            raycaster.setFromCamera(mouse, camera);
+
+            const intersects = raycaster.intersectObjects(scene.children, true);
+            if (intersects.length > 0) {
+                const object = intersects[0].object;
+                if (object.userData.info) {
+                    document.getElementById('info').innerText = object.userData.info;
+                }
+            }
+        }, false);
+    });
+
+    camera.position.z = 5;
+
+    function animate() {
+        requestAnimationFrame(animate);
+        renderer.render(scene, camera);
+    }
+    animate();
+</script>
+
+<div class="augmented-reality css-znwgwb">
+    <div class="container-fluid">
+        <div class="row no-gutters">
+            <div class="images col-12 col-md">
+
+                <span style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                    <span style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 51.1811% 0px 0px;"></span>
+                    <img alt="Revuelto | Lamborghini.com" src="../static/images/{{data[10]}}" decoding="async" data-ning="responsive" class="css-ns94h9" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;" >
+                </span>
+                
+            </div>
+            <div class="header-center">
+                <h1 class="text-uppercase">{{data[1]}}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="model3D">
+    <model-viewer id="move" auto-rotate camera-controls ar xr-environment loading="eager" class="model-3d"
+        src="../static/models/{{data[3]}}" shadow-intensity="1" alt="A 3D model of an astronaut." 
+        ios-src="../static/models/{{data[4]}}">
+        <button class="ar-button" slot="ar-button">
+            <img src="../static/images/ar.png" alt="icon-ar">
+            Activate AR
+        </button>    
+        <button class="Hotspot" slot="hotspot-1" data-position="{{data[19]}}" data-normal="{{data[23]}}" data-visibility-attribute="visible"
+            onclick="handleHotspotClick('Trọng lượng khô: {{data[30]}}')">
+        </button>
+        <button class="Hotspot" slot="hotspot-2" data-position="{{data[20]}}" data-normal="{{data[24]}}" data-visibility-attribute="visible"
+            onclick="handleHotspotClick('Động cơ: {{data[31]}}')">
+        </button>
+        <button class="Hotspot" slot="hotspot-3" data-position="{{data[21]}}" data-normal="{{data[25]}}" data-visibility-attribute="visible"
+            onclick="handleHotspotClick('Tổng công suất: {{data[32]}}')">
+        </button>
+       
+        <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+        </div>
+<!-- 
+        <button slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></button>
+        <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0" data-normal="1 0 0"></button>
+        <button slot="hotspot-dot+X-Y-Z" class="dot" data-position="1 -1 -1" data-normal="1 0 0"></button>
+        <button slot="hotspot-dim+X-Z" class="dim" data-position="1 0 -1" data-normal="1 0 0"></button>
+        <button slot="hotspot-dot+X+Y-Z" class="dot" data-position="1 1 -1" data-normal="0 1 0"></button>
+        <button slot="hotspot-dim+Y-Z" class="dim" data-position="0 -1 -1" data-normal="0 1 0"></button>
+        <button slot="hotspot-dot-X+Y-Z" class="dot" data-position="-1 1 -1" data-normal="0 1 0"></button>
+        <button slot="hotspot-dim-X-Z" class="dim" data-position="-1 0 -1" data-normal="-1 0 0"></button>
+        <button slot="hotspot-dot-X-Y-Z" class="dot" data-position="-1 -1 -1" data-normal="-1 0 0"></button>
+        <button slot="hotspot-dim-X-Y" class="dim" data-position="-1 -1 0" data-normal="-1 0 0"></button>
+        <button slot="hotspot-dot-X-Y+Z" class="dot" data-position="-1 -1 1" data-normal="-1 0 0"></button>
+        <svg id="dimLines" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" class="dimensionLineContainer">
+            <line class="dimensionLine"></line>
+            <line class="dimensionLine"></line>
+            <line class="dimensionLine"></line>
+            <line class="dimensionLine"></line>
+            <line class="dimensionLine"></line>
+        </svg>
+         -->
+    </model-viewer>
+</div>
+
+<div class="css-znwgwb">
+    <div class="mobile container">
+        <div class="top">
+            <div class="texts-wrapper tech-section ">
+                <h2 class="primary tech-section-title title-h2">EXTERIOR</h2>
+                <div class="tech-data">
+                    <div class="data">
+                        <p>{{data[8]}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="css-znwgwb">
+    <div class="mobile container">
+        <div class="top">
+            <div class="texts-wrapper tech-section ">
+                <h2 class="primary tech-section-title title-h2">INTERIOR</h2>
+                <div class="tech-data">
+                    <div class="data">
+                        <p>{{data[9]}}</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<div class="container-fluid css-znwgwb accordion tech-specification">
+    <div class="row">
+        <div class="col-12 col-sm-8 offset-sm-2 col-lg-6 offset-lg-3">
+            <h2 class="tech-section-title">TECHNICAL SPECIFICATIONS</h2>
+            <div class="tech-section">   
+                <ul class="tech-data">
+                    <li class="d-md-flex align-items-center">
+                        <span class="label">Displacement</span>
+                        <span class="data ml-md-5 flex-fill">{{data[12]}}</span>
+                    </li>
+                    <li class="d-md-flex align-items-center">
+                        <span class="label">Max power (combined ICE+EE)</span>
+                        <span class="data ml-md-5 flex-fill">{{data[13]}}</span>
+                    </li>
+                    <li class="d-md-flex align-items-center">
+                        <span class="label">Top speed</span>
+                        <span class="data ml-md-5 flex-fill">{{data[14]}}</span>
+                    </li>
+                    <li class="d-md-flex align-items-center">
+                        <span class="label">acceleration 0-100 km/h (0-62 mph)</span>
+                        <span class="data ml-md-5 flex-fill">{{data[15]}}</span>
+                    </li>
+                    <li class="d-md-flex align-items-center">
+                        <span class="label">Combined consumption*</span>
+                        <span class="data ml-md-5 flex-fill">{{data[16]}}</span>
+                    </li>
+                    <li class="d-md-flex align-items-center">
+                        <span class="label">Combined CO2 Emissions*</span>
+                        <span class="data ml-md-5 flex-fill">{{data[17]}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
